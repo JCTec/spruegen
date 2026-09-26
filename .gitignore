@@ -1,0 +1,7 @@
+.venv/
+workdir/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+tests/fixtures/*.stl
+out.stl

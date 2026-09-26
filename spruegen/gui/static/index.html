@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>spruegen</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='10' r='7' fill='none' stroke='%23b0703c' stroke-width='3'/%3E%3Crect x='13' y='17' width='6' height='13' fill='%23d9573b'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/static/style.css">
+<script type="importmap">
+{ "imports": { "three": "/static/vendor/three.module.js" } }
+</script>
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <header class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div><h1>spruegen</h1><p>Sprue trees for ring casting</p></div>
+    </header>
+
+    <!-- 1 LOAD -->
+    <section class="step" id="step-load">
+      <h2><span class="n">1</span> Load ring</h2>
+      <label class="drop" id="drop" tabindex="0">
+        <input type="file" id="file" accept=".stl" hidden>
+        <strong>Drop an STL here</strong><span>or click to browse · millimetres</span>
+      </label>
+      <div id="ring-info" class="info" hidden></div>
+    </section>
+
+    <!-- 2 SETTINGS -->
+    <section class="step" id="step-settings">
+      <h2><span class="n">2</span> Settings</h2>
+      <label class="field">Metal / process
+        <select id="preset"></select>
+      </label>
+      <p class="hint" id="preset-notes"></p>
+
+      <div class="field">Tree
+        <div class="seg" role="radiogroup" id="tree">
+          <button type="button" data-v="auto" class="on" title="The analysis decides how many feeders and where">Auto</button>
+          <button type="button" data-v="single" title="One feeder at the thickest safe spot">Single</button>
+          <button type="button" data-v="spider" title="Several equal feeders, each straight to the stem">Spider</button>
+          <button type="button" data-v="y" title="Feeders share a trunk that splits">Y</button>
+        </div>
+      </div>
+      <label class="field row" id="feeders-row">Feeders
+        <input type="number" id="feeders" min="2" max="6" value="2" disabled>
+      </label>
+      <div class="field">Vents <span class="hint inline">rods where metal arrives last</span>
+        <div class="seg" role="radiogroup" id="vents">
+          <button type="button" data-v="off" class="on">Off</button>
+          <button type="button" data-v="auto">Auto</button>
+          <button type="button" data-v="1">1</button>
+          <button type="button" data-v="2">2</button>
+          <button type="button" data-v="3">3</button>
+          <button type="button" data-v="4">4</button>
+        </div>
+      </div>
+      <p class="locked">Stem <b id="stem-dims">Ø10 × 35 mm</b> <span class="tag">locked</span></p>
+
+      <details id="advanced">
+        <summary>Advanced</summary>
+        <label class="field row">Min. attach thickness (mm)<input type="number" step="0.1" data-adv="min_attach_thickness_mm"></label>
+        <label class="field row">Feeder Ø min (mm)<input type="number" step="0.1" data-adv="feeder_d_min_mm"></label>
+        <label class="field row">Feeder Ø max (mm)<input type="number" step="0.1" data-adv="feeder_d_max_mm"></label>
+        <label class="field row">Feed reach (mm)<input type="number" step="1" data-adv="feed_reach_mm"></label>
+        <label class="field row">Volume per feeder (mm³)<input type="number" step="50" data-adv="feeder_capacity_mm3"></label>
+        <button type="button" class="link" id="adv-reset">Reset to preset</button>
+      </details>
+    </section>
+
+    <!-- 3/4 ACTIONS -->
+    <section class="step">
+      <h2><span class="n">3</span> Analyze <span class="opt">optional</span></h2>
+      <button class="btn" id="btn-analyze" disabled>Analyze feeding</button>
+      <div id="analysis-short" class="info" hidden></div>
+    </section>
+    <section class="step">
+      <h2><span class="n">4</span> Generate</h2>
+      <button class="btn primary" id="btn-generate" disabled>Generate sprue tree</button>
+      <div id="gen-short" class="info" hidden></div>
+    </section>
+    <section class="step">
+      <h2><span class="n">5</span> Export</h2>
+      <div class="exports">
+        <a class="btn primary" id="btn-export" aria-disabled="true" download>Download STL</a>
+        <a class="btn" id="btn-zip" aria-disabled="true" download>Package (.zip)</a>
+      </div>
+      <p class="hint" id="export-hint">Generate a valid result first.</p>
+    </section>
+  </aside>
+
+  <main class="main">
+    <div class="viewer" id="viewer">
+      <div class="toolbar">
+        <div class="layers" id="layers">
+          <label><input type="checkbox" data-layer="ring" checked> <i class="sw ring"></i>Ring</label>
+          <label><input type="checkbox" data-layer="tree" checked disabled> <i class="sw tree"></i>Tree</label>
+          <label><input type="checkbox" data-layer="vents" checked disabled> <i class="sw vents"></i>Vents</label>
+          <label><input type="checkbox" data-layer="zones" disabled> <i class="sw zones"></i>Feeding zones</label>
+          <label><input type="checkbox" data-layer="final" disabled> <i class="sw final"></i>Final union</label>
+        </div>
+        <button class="btn small" id="btn-fit" title="Frame the model">Fit view</button>
+      </div>
+      <div class="empty" id="empty">
+        <div class="ring-art" aria-hidden="true"></div>
+        <p>Load a ring STL to begin.</p>
+      </div>
+      <div class="busy" id="busy" hidden><div class="spinner"></div><span id="busy-text">Working…</span></div>
+      <div class="stale-banner" id="stale" hidden>Settings changed — generate again to update the result.</div>
+      <div class="error" id="error" hidden role="alert"><span id="error-text"></span><button id="error-x" aria-label="Close">×</button></div>
+    </div>
+    <div class="panels">
+      <section class="panel" id="panel-analysis">
+        <h3>Analysis</h3>
+        <div id="analysis-body" class="muted">Run <b>Analyze</b> to see where the ring is thick (hot spots), how many feeders it needs and where the metal arrives last.</div>
+      </section>
+      <section class="panel" id="panel-result">
+        <h3>Result</h3>
+        <div id="result-body" class="muted">Run <b>Generate</b> to build the sprue tree and check it.</div>
+      </section>
+    </div>
+  </main>
+</div>
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "stl": "../../input.stl",
+  "up_axis": "z",
+  "finger_axis_hint": null,
+  "lock": ["stem_d_mm", "stem_h_mm", "attach_mode"],
+  "manual_attach": null
+}
