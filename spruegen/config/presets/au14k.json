@@ -1,0 +1,8 @@
+{
+  "extends": "ag925",
+  "metal": "Au14k",
+  "alloy": "au14y",
+  "feeder_d_min_mm": 2.2,
+  "min_attach_thickness_mm": 1.5,
+  "notes": "Oro 14k amarillo: fluye bien; más denso (≈13 g/cm³), mismo criterio volumétrico. Valores de partida; calíbralos con `spruegen log` según tus coladas."
+}

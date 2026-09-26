@@ -5,4 +5,4 @@ import warnings as _warnings
 # astillas de área cero en mallas de CAD: trimesh avisa en baricéntricas, sin efecto en los resultados
 _warnings.filterwarnings("ignore", category=RuntimeWarning, module=r"trimesh\.triangles")
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"

@@ -1,6 +1,6 @@
 """Anillos sintéticos para tests (mm). `python tests/fixtures/rings.py` los exporta como STL.
 
-Los anillos "de galería" viven en spruegen.showcase; acá quedan los de tests puntuales.
+Los anillos "de galería" viven en spruegen.report.showcase; acá quedan los de tests puntuales.
 """
 
 from __future__ import annotations
@@ -10,7 +10,7 @@ from pathlib import Path
 import numpy as np
 import trimesh
 
-from spruegen.showcase import carved_band, dumbbell_ring, lattice_band, plain_band, signet, solitaire, wide_band  # noqa: F401
+from spruegen.report.showcase import carved_band, dumbbell_ring, lattice_band, plain_band, signet, solitaire, wide_band  # noqa: F401
 
 
 def torus_ring(inner_d: float = 19.0, shank: float = 2.0) -> trimesh.Trimesh:

@@ -15,8 +15,8 @@ from fastapi import Body, FastAPI, File, HTTPException, UploadFile
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
-from . import service
-from .service import GuiError, Session
+from spruegen.gui import service
+from spruegen.gui.service import GuiError, Session
 
 STATIC = Path(__file__).parent / "static"
 ROOT = Path.home() / ".spruegen" / "gui"

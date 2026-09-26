@@ -10,9 +10,12 @@ from pathlib import Path
 
 import numpy as np
 
-from .. import analysis, cli, features, presets
-from ..schemas import FeatureError, Profile, SpruegenError
-from .i18n import translate, translate_all
+from spruegen.plan import analysis
+from spruegen import pipeline
+from spruegen.detect import features
+from spruegen.config import presets
+from spruegen.schemas import FeatureError, Profile, SpruegenError
+from spruegen.gui.i18n import translate, translate_all
 
 ZONE_COLORS = ["#d9573b", "#3b7dd9", "#2e9e5b", "#b85fc9", "#e0a526", "#20a4b8"]
 ADV_TOP = ("min_attach_thickness_mm", "feeder_d_min_mm", "feeder_d_max_mm")
@@ -100,7 +103,7 @@ def cli_flags(config: dict) -> tuple[str, int | None, str]:
 def _profile_for(config: dict, sdir: Path) -> tuple[Path, Profile]:
     path = build_profile(config, sdir)
     mode, feeders, vents = cli_flags(config)
-    return path, cli.apply_cli(presets.load(path), mode, feeders, vents)
+    return path, pipeline.apply_cli(presets.load(path), mode, feeders, vents)
 
 
 # ---------------------------------------------------------------- steps
@@ -109,7 +112,7 @@ def _profile_for(config: dict, sdir: Path) -> tuple[Path, Profile]:
 def load_summary(stl: Path) -> dict:
     """Validate the ring (units, watertight, finger hole) and describe it."""
     try:
-        mesh, rep = cli.load_ring(stl)
+        mesh, rep = pipeline.load_ring(stl)
     except SpruegenError as e:
         raise GuiError(translate(str(e)))
     ext = mesh.extents
@@ -145,7 +148,7 @@ def analyze(sess: Session, config: dict) -> dict:
     if out.exists():
         shutil.rmtree(out)
     try:
-        res = cli.run_analyze(sess.stl, None, out, prof=prof)
+        res = pipeline.run_analyze(sess.stl, None, out, prof=prof)
     except (SpruegenError, ValueError) as e:
         raise GuiError(translate(str(e)))
     s = res.summary
@@ -212,8 +215,8 @@ def generate(sess: Session, config: dict) -> dict:
         shutil.rmtree(gen)
     sess.result_ok = False
     try:
-        prop = cli.run_propose(sess.stl, prof_path, None, gen, mode, feeders, vents)
-        rep = cli.run_apply(gen / "proposal.json", gen / "out.stl")
+        prop = pipeline.run_propose(sess.stl, prof_path, None, gen, mode, feeders, vents)
+        rep = pipeline.run_apply(gen / "proposal.json", gen / "out.stl")
     except (SpruegenError, ValueError) as e:
         raise GuiError(translate(str(e)))
     (gen / "validate.json").write_text(json.dumps(rep, indent=2, ensure_ascii=False, default=float))
@@ -243,6 +246,7 @@ def generate(sess: Session, config: dict) -> dict:
         "transform": prop.transform,
         "meshes": meshes,
         "piece_height_mm": prop.ring_job["piece_height_mm"],
+        "casting": prop.casting,
     }
 
 
@@ -257,11 +261,11 @@ def export_zip(sess: Session) -> Path:
     gen = sess.dir / "gen"
     if not sess.result_ok or not (gen / "out.stl").exists():
         raise GuiError("Nothing to export yet — generate a valid result first.")
-    from ..schemas import load_proposal
+    from spruegen.schemas import load_proposal
 
     prop = load_proposal(gen / "proposal.json")
     try:
-        from .. import render
+        from spruegen.report import render
 
         if not (gen / "render.png").exists():
             render.render_proposal(prop, gen / "render.png", title=sess.name)

@@ -1,0 +1,3411 @@
+{
+ "schema_version": 1,
+ "sources": {
+  "progold2018": {
+   "title": "Understanding Gold Alloy Features From Thermodynamic Phenomena",
+   "authors": "P. Sbornicchia, S. Rappo, D. Zito, V. Doppio, F. Tiso, G. Cepeda (Progold S.p.A.)",
+   "year": 2018,
+   "venue": "Santa Fe Symposium on Jewelry Manufacturing Technology",
+   "url": "https://old.progold.com/PG_Resources/PG_Documents/Innovation/SFS2018C_GB.pdf",
+   "type": "paper",
+   "accessed": "2026-09-26"
+  },
+  "fb2022": {
+   "title": "New 925 Silver Alloys with Increased Tarnish Resistance",
+   "authors": "J. Fischer-Buehner, R. Bertoncello, F. Bottelli, A. Friso, M. Poliero (Legor Group)",
+   "year": 2022,
+   "venue": "Santa Fe Symposium on Jewelry Manufacturing Technology",
+   "url": "https://static1.squarespace.com/static/55f1c5d5e4b0e83b4ef3e659/t/62a8cf48dbb0313bbc585786/1655230290362/Fischer-Buehner_Joerg_paper.pdf",
+   "type": "paper",
+   "accessed": "2026-09-26"
+  },
+  "fb2010": {
+   "title": "Silver Casting Revisited: The Alloy Perspective",
+   "authors": "J. Fischer-Buehner et al.",
+   "year": 2010,
+   "venue": "Santa Fe Symposium on Jewelry Manufacturing Technology",
+   "url": "https://static1.squarespace.com/static/55f1c5d5e4b0e83b4ef3e659/t/66faf2e12b872c789f366dfa/1727722214175/2010-Silver-Casting-Revisited.pdf",
+   "type": "paper",
+   "accessed": "2026-09-26"
+  },
+  "grimwade2002": {
+   "title": "Solidification and Casting",
+   "authors": "M. Grimwade",
+   "year": 2002,
+   "venue": "Santa Fe Symposium on Jewelry Manufacturing Technology",
+   "url": "https://static1.squarespace.com/static/55f1c5d5e4b0e83b4ef3e659/t/66f5da99a4071a45f0a5ff71/1727388315680/2002-Solidification-and-Casting.pdf",
+   "type": "paper",
+   "accessed": "2026-09-26"
+  },
+  "ott1985": {
+   "title": "Porosity in Castings, Its Causes and Prevention (Investment Casting of Gold Jewellery)",
+   "authors": "D. Ott, C.J. Raub, W.S. Rapson",
+   "year": 1985,
+   "venue": "Gold Bulletin 18(3):98-108",
+   "url": "https://link.springer.com/content/pdf/10.1007/BF03214692.pdf",
+   "type": "paper",
+   "accessed": "2026-09-26"
+  },
+  "heiss2015": {
+   "title": "Platinum Investment Casting, Part I: Simulation and Experimental Study of the Casting Process",
+   "authors": "T. Heiss, U.E. Klotz, D. Tiberto",
+   "year": 2015,
+   "venue": "Johnson Matthey Technology Review 59(2):95-108",
+   "url": "https://www.ingentaconnect.com/content/matthey/jmtr/2015/00000059/00000002/art00004",
+   "type": "paper",
+   "accessed": "2026-09-26"
+  },
+  "klotz2011": {
+   "title": "The Role of Process Parameters in Platinum Casting",
+   "authors": "U.E. Klotz, T. Drago",
+   "year": 2011,
+   "venue": "Platinum Metals Review 55(1):20-27",
+   "url": "https://www.ingentaconnect.com/content/matthey/pmr/2011/00000055/00000001/art00004",
+   "type": "paper",
+   "accessed": "2026-09-26"
+  },
+  "klotz2014sfs": {
+   "title": "Platinum Investment Casting: Material Properties, Casting Simulation and Optimum Process Parameters",
+   "authors": "U.E. Klotz, T. Heiss, D. Tiberto, F. Held",
+   "year": 2014,
+   "venue": "28th Santa Fe Symposium on Jewelry Manufacturing Technology (proceedings publ. 2015)",
+   "url": "https://static1.squarespace.com/static/55f1c5d5e4b0e83b4ef3e659/t/66fc221c009e210e06decee4/1727799839198/2015-KlotzUlrich-Platinum-Email.pdf",
+   "type": "paper",
+   "accessed": "2026-09-26"
+  },
+  "klotz2019pd": {
+   "title": "Development of New 950Pd Investment Casting Alloys with Superior Properties",
+   "authors": "U.E. Klotz, F. Held",
+   "year": 2019,
+   "venue": "Santa Fe Symposium on Jewelry Manufacturing Technology",
+   "url": "https://static1.squarespace.com/static/55f1c5d5e4b0e83b4ef3e659/t/66fc5328524a6f79dffc4885/1727812404594/2019-Klotz_950Pd_Investment-Casting.pdf",
+   "type": "paper",
+   "accessed": "2026-09-26"
+  },
+  "fb2009pd": {
+   "title": "Challenges for Palladium Casting Alloys",
+   "authors": "J. Fischer-Buehner, A. Basso, M. Poliero (Legor Group)",
+   "year": 2009,
+   "venue": "Santa Fe Symposium on Jewelry Manufacturing Technology",
+   "url": "https://static1.squarespace.com/static/55f1c5d5e4b0e83b4ef3e659/t/6705bd0bcccd343094fe0c41/1728429327877/2009-Challenges-for-Palladium-Casting-Alloys.pdf",
+   "type": "paper",
+   "accessed": "2026-09-26"
+  },
+  "maerz2004": {
+   "title": "Platinum Alloys - Features & Benefits",
+   "authors": "J.J. Maerz (Platinum Guild International USA)",
+   "year": 2004,
+   "venue": "PGI / Ganoksin",
+   "url": "https://www.ganoksin.com/article/platinum-alloys-features-benefits/",
+   "type": "paper",
+   "accessed": "2026-09-26"
+  },
+  "maerz2007": {
+   "title": "Platinum Casting Tree Design",
+   "authors": "J.J. Maerz (Platinum Guild International USA)",
+   "year": 2007,
+   "venue": "Santa Fe Symposium on Jewelry Manufacturing Technology",
+   "url": "https://static1.squarespace.com/static/55f1c5d5e4b0e83b4ef3e659/t/66fabf1f0f1ba73ae588d629/1727708959745/2007-Platinum-Casting-Tree-Design.pdf",
+   "type": "paper",
+   "accessed": "2026-09-26"
+  },
+  "phet2017": {
+   "title": "The behavior of gypsum-bonded investment in the gold jewelry casting process",
+   "authors": "T. Phetrattanarangsi, C. Puncreobutr, A. Khamkongkaeo et al.",
+   "year": 2017,
+   "venue": "Thermochimica Acta 657:144-150",
+   "url": "https://www.sciencedirect.com/science/article/abs/pii/S0040603117302290",
+   "type": "paper",
+   "accessed": "2026-09-26"
+  },
+  "campbell2015": {
+   "title": "Complete Casting Handbook, 2nd ed. (Table 7.1 Solidification shrinkage for some metals, via ScienceDirect Topics)",
+   "authors": "J. Campbell",
+   "year": 2015,
+   "venue": "Butterworth-Heinemann",
+   "url": "https://www.sciencedirect.com/topics/engineering/solidification-shrinkage",
+   "type": "book",
+   "accessed": "2026-09-26"
+  },
+  "campbell10": {
+   "title": "Ten Rules for Making Reliable Castings (reproduction)",
+   "authors": "J. Campbell",
+   "year": 2004,
+   "venue": "reproduced by Acme Alloys",
+   "url": "https://www.acmealloys.com/wp-content/uploads/2020/08/42-Prof-Dr-John-Campbells-10-rules-for-making-reliable-castings.pdf",
+   "type": "book",
+   "accessed": "2026-09-26"
+  },
+  "wiki_chvorinov": {
+   "title": "Chvorinov's rule (citing Chvorinov 1940 Giesserei 27; Degarmo 2003; Askeland 2004)",
+   "authors": "Wikipedia contributors",
+   "year": 2026,
+   "venue": "Wikipedia (secondary)",
+   "url": "https://en.wikipedia.org/wiki/Chvorinov%27s_rule",
+   "type": "handbook",
+   "accessed": "2026-09-26"
+  },
+  "wiki_riser": {
+   "title": "Riser (casting) (citing Degarmo et al. 2003)",
+   "authors": "Wikipedia contributors",
+   "year": 2026,
+   "venue": "Wikipedia (secondary)",
+   "url": "https://en.wikipedia.org/wiki/Riser_(casting)",
+   "type": "handbook",
+   "accessed": "2026-09-26"
+  },
+  "giesslex": {
+   "title": "Chvorinov's rule",
+   "authors": "Giesserei-Lexikon",
+   "year": 2026,
+   "venue": "Giesserei-Lexikon (foundry encyclopedia)",
+   "url": "https://www.giessereilexikon.com/en/foundry-lexicon/Encyclopedia/show/chvorinovs-rule-4627/",
+   "type": "handbook",
+   "accessed": "2026-09-26"
+  },
+  "wiki_silver": {
+   "title": "Silver (element infobox, CRC-derived values)",
+   "authors": "Wikipedia contributors",
+   "year": 2026,
+   "venue": "Wikipedia (secondary)",
+   "url": "https://en.wikipedia.org/wiki/Silver",
+   "type": "handbook",
+   "accessed": "2026-09-26"
+  },
+  "wiki_platinum": {
+   "title": "Platinum (element infobox, CRC-derived values)",
+   "authors": "Wikipedia contributors",
+   "year": 2026,
+   "venue": "Wikipedia (secondary)",
+   "url": "https://en.wikipedia.org/wiki/Platinum",
+   "type": "handbook",
+   "accessed": "2026-09-26"
+  },
+  "wiki_palladium": {
+   "title": "Palladium (element infobox, CRC-derived values)",
+   "authors": "Wikipedia contributors",
+   "year": 2026,
+   "venue": "Wikipedia (secondary)",
+   "url": "https://en.wikipedia.org/wiki/Palladium",
+   "type": "handbook",
+   "accessed": "2026-09-26"
+  },
+  "wiki_zinc": {
+   "title": "Zinc (element infobox, CRC-derived values)",
+   "authors": "Wikipedia contributors",
+   "year": 2026,
+   "venue": "Wikipedia (secondary)",
+   "url": "https://en.wikipedia.org/wiki/Zinc",
+   "type": "handbook",
+   "accessed": "2026-09-26"
+  },
+  "wiki_copper": {
+   "title": "Copper (element infobox, CRC-derived values)",
+   "authors": "Wikipedia contributors",
+   "year": 2026,
+   "venue": "Wikipedia (secondary)",
+   "url": "https://en.wikipedia.org/wiki/Copper",
+   "type": "handbook",
+   "accessed": "2026-09-26"
+  },
+  "wiki_tc": {
+   "title": "List of thermal conductivities",
+   "authors": "Wikipedia contributors",
+   "year": 2026,
+   "venue": "Wikipedia (secondary)",
+   "url": "https://en.wikipedia.org/wiki/List_of_thermal_conductivities",
+   "type": "handbook",
+   "accessed": "2026-09-26"
+  },
+  "umicore2021": {
+   "title": "Grain & Fine Metal - Ready Stock Catalogue (casting grain table; metal & flask temperatures)",
+   "authors": "Umicore Jewelry & Industrial Metals (Canada)",
+   "year": 2021,
+   "venue": "Umicore JIM-CA catalogue 2021-07",
+   "url": "https://jim-ca.umicore.com/storage/jim_ca/grain-ready-stock-catalogue-2021-07.pdf",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "glines": {
+   "title": "Master Alloys Casting Grain Technical Specifications",
+   "authors": "Glines & Rhodes",
+   "year": 2020,
+   "venue": "Glines & Rhodes tech sheet",
+   "url": "https://www.glinesandrhodes.com/wp-content/uploads/2020/01/GR_Casting_Grain_Tech_Sheet.pdf",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "upm": {
+   "title": "Casting Information (flask temperature table)",
+   "authors": "United PM (Thailand) Co., Ltd.",
+   "year": null,
+   "venue": "United PM technical sheet",
+   "url": "https://unitedpmthailand.com/data/metalknowledge/CASTING%20INFORMATION%20(E).pdf",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "stuller_gold": {
+   "title": "General Casting Tips for Karat Golds",
+   "authors": "Stuller Technical Team",
+   "year": 2012,
+   "venue": "Stuller Bench Jeweler",
+   "url": "https://www.stuller.com/benchjeweler/resources/bencharticles/view/general-casting-tips-for-karat-golds/",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "stuller_sprue": {
+   "title": "The Do's and Don'ts of Sprueing",
+   "authors": "D. Busby (Stuller)",
+   "year": 2018,
+   "venue": "Stuller Bench Jeweler",
+   "url": "https://www.stuller.com/benchjeweler/resources/bencharticles/view/sprueing-tips/",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "hs_jeff": {
+   "title": "Jeff's Top Casting Tips",
+   "authors": "J. Hoover (Hoover & Strong)",
+   "year": 2006,
+   "venue": "Hoover & Strong Technical Articles",
+   "url": "http://technical-articles.hooverandstrong.com/wordpress/jeff%CA%BCs-top-casting-tips/",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "hs_arg": {
+   "title": "Important Information About Alloys (Argentium Sterling Silver technical data)",
+   "authors": "Hoover & Strong",
+   "year": 2009,
+   "venue": "Hoover & Strong Technical Articles",
+   "url": "http://technical-articles.hooverandstrong.com/wordpress/important-information-about-alloys/",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "hs_arg_prod": {
+   "title": "Argentium Silver - Investment Casting - Production Guidance",
+   "authors": "S. Bernstrom (Hoover & Strong)",
+   "year": 2010,
+   "venue": "Hoover & Strong Technical Articles",
+   "url": "http://technical-articles.hooverandstrong.com/wordpress/argentium-silver-investment-casting-production-guidance/",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "hs_trupd": {
+   "title": "TruPd 950 Palladium - The New White Metal",
+   "authors": "S. Grice (Hoover & Strong)",
+   "year": 2006,
+   "venue": "Hoover & Strong Technical Articles",
+   "url": "http://technical-articles.hooverandstrong.com/wordpress/trupdtm-950-palladium-the-new-white-metal/",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "rio_a935": {
+   "title": "Technical Sheet Argentium 935 Silver Casting Grain #103-635",
+   "authors": "Rio Grande / The Bell Group",
+   "year": 2010,
+   "venue": "Rio Grande instruction sheet",
+   "url": "https://products.riogrande.com/content/Instruction-Sheets/Argentium-935-Silver-Casting-Grain-Technical-Sheet-IS.pdf",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "argguild_960": {
+   "title": "Argentium 960 Silver Grain - Investment Casting (product technical data)",
+   "authors": "Argentium Guild",
+   "year": null,
+   "venue": "argentiumguild.com",
+   "url": "https://www.argentiumguild.com/product-page/argentium-960-silver-grain-investment-casting",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "eid2023": {
+   "title": "Working with Argentium Silver (rev. July 2023)",
+   "authors": "C. Eid",
+   "year": 2023,
+   "venue": "cynthiaeid.com",
+   "url": "https://cynthiaeid.com/wp-content/uploads/2024/02/Working-with-Argentium-940-v16-FINAL-Eid-8-1-2023.pdf",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "rio_pt": {
+   "title": "How To Cast Platinum",
+   "authors": "Rio Grande",
+   "year": 2012,
+   "venue": "Rio Grande instruction sheet",
+   "url": "https://products.riogrande.com/content/Instruction-Sheets/How-To-Cast-Platinum-IS.pdf",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "legor_a183n": {
+   "title": "Technical Sheet A183N 750 - all-purpose master alloy for 18kt yellow gold",
+   "authors": "Legor Group S.p.A.",
+   "year": 2023,
+   "venue": "Legor TDS (13/04/2023)",
+   "url": "https://innovaline.es/wp-content/uploads/2023/07/TDS_A183N_750_ENG.pdf",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "legor_or133": {
+   "title": "Technical Sheet OR133 750 - all-purpose master alloy for 14-18kt red gold",
+   "authors": "Legor Group S.p.A.",
+   "year": 2023,
+   "venue": "Legor TDS (13/04/2023)",
+   "url": "https://innovaline.es/wp-content/uploads/2018/10/TDS_OR133_750_ENG-1.pdf",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "legor_nf509": {
+   "title": "Technical Sheet NF509 750 - nickel-free master alloy for 18kt white gold",
+   "authors": "Legor Group S.p.A.",
+   "year": 2024,
+   "venue": "Legor TDS (02/02/2024), via Rio Grande",
+   "url": "https://www.riogrande.com/globalassets/knowledge-hub/instruction-sheets/2025/05/tds_nf509_750_104418.pdf",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "legor_nf508": {
+   "title": "Technical Sheet NF508 585 - nickel-free master alloy for 14-18kt white gold",
+   "authors": "Legor Group S.p.A.",
+   "year": 2020,
+   "venue": "Legor TDS (print 28/01/2020)",
+   "url": "https://legor.pl/wp-content/uploads/2021/08/TDS_NF508_585_ENG.pdf",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "rio_104405": {
+   "title": "Technical Chart Premium Alloy, Nickel-based White Color 18k (#104405)",
+   "authors": "Rio Grande",
+   "year": null,
+   "venue": "Rio Grande technical chart",
+   "url": "https://products.riogrande.com/content/Instruction-Sheets/Basic-Alloy-Nickel-based-White-Color-IS-10440518.pdf",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "rio_104401": {
+   "title": "Technical Chart Basic Alloy, Red Gold Color 10-14-18k (#104401)",
+   "authors": "Rio Grande",
+   "year": null,
+   "venue": "Rio Grande technical chart",
+   "url": "https://products.riogrande.com/content/Instruction-Sheets/Basic-Alloy-Red-Gold-Color-10440118-IS.pdf",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "espi_sterling": {
+   "title": "Silver - Sterling technical data",
+   "authors": "ESPI Metals",
+   "year": null,
+   "venue": "espimetals.com",
+   "url": "https://www.espimetals.com/index.php/technical-data/81-Silver%20-%20Sterling",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "kerr_sc20": {
+   "title": "Satin Cast 20 / KerrCast 2000 Directions For Use (Lit. 34332A)",
+   "authors": "Kerr Corporation",
+   "year": 2011,
+   "venue": "Kerr DFU",
+   "url": "https://youngjintool.cafe24.com/web/pdf/DFU+SC20+KC2000.pdf",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "bell_sprue": {
+   "title": "The Sprue System Design",
+   "authors": "E. Bell (Rio Grande)",
+   "year": 2016,
+   "venue": "Ganoksin",
+   "url": "https://www.ganoksin.com/article/sprue-system-design/",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "progold_labp": {
+   "title": "The design of power supply (feeding) systems in investment casting processes",
+   "authors": "Progold S.p.A. LAB",
+   "year": null,
+   "venue": "Progold technical note",
+   "url": "https://old.progold.com/PG_Resources/PG_Documents/Innovation/LABP_GB.pdf",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "progold2009": {
+   "title": "Evaluation of Hot Tearing in 925 Silver Alloys",
+   "authors": "Progold S.p.A.",
+   "year": 2009,
+   "venue": "Santa Fe Symposium on Jewelry Manufacturing Technology",
+   "url": "https://old.progold.com/PG_Resources/PG_Documents/Innovation/SFS2009_GB.pdf",
+   "type": "paper",
+   "accessed": "2026-09-26"
+  },
+  "yoshida2022": {
+   "title": "Sprue system for better results in jewelry casting",
+   "authors": "M. Yoshida (Yoshida Cast)",
+   "year": 2022,
+   "venue": "yoshidacast.com",
+   "url": "https://yoshidacast.com/spruing-system-for-better-results-in-jewelry-casting-shapes-of-ingates-to-prevent-turbulence/",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "stpaul": {
+   "title": "Alloy specifications technical data sheets (CDA-format data: C83600, C87500, C87600, C90500, C92200)",
+   "authors": "St. Paul Brass & Aluminum Foundry",
+   "year": null,
+   "venue": "stpaulfoundry.com AlloySpecs",
+   "url": "https://stpaulfoundry.com/AlloySpecs/alloy_specifications_data_page.aspx?id=C83600",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "concast": {
+   "title": "Wieland Concast alloy data sheets (C23000, C26000, C90500, C85700)",
+   "authors": "Wieland Concast",
+   "year": null,
+   "venue": "concast.com",
+   "url": "https://www.concast.com/c90500.php",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  },
+  "azom_c87500": {
+   "title": "Copper Casting Alloy UNS C87500",
+   "authors": "AZoM",
+   "year": null,
+   "venue": "azom.com",
+   "url": "https://www.azom.com/article.aspx?ArticleID=6504",
+   "type": "datasheet",
+   "accessed": "2026-09-26"
+  }
+ },
+ "alloys": {
+  "ag925": {
+   "name": "Sterling silver 925 (Ag-Cu)",
+   "family": "silver",
+   "fineness": 925,
+   "investment": "gypsum",
+   "composition_wt_pct": {
+    "Ag": 92.5,
+    "Cu": 7.5
+   },
+   "composition_source": {
+    "source": "fb2022",
+    "locator": "Table 1, standard 925 sterling"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 10.4,
+     "source": "umicore2021",
+     "locator": "casting grain table, Sterling Silver GRSSW000000",
+     "alt": [
+      {
+       "value": 10.36,
+       "source": "espi_sterling",
+       "locator": "Density"
+      }
+     ]
+    },
+    "solidus_c": {
+     "value": 780,
+     "source": "fb2022",
+     "locator": "Table 3, standard 925: solidus 780C/1436F",
+     "alt": [
+      {
+       "value": 810,
+       "source": "umicore2021",
+       "locator": "casting grain table, Sterling"
+      },
+      {
+       "value": 802,
+       "source": "eid2023",
+       "locator": "p.1 sterling solidus 1475F/802C"
+      }
+     ]
+    },
+    "liquidus_c": {
+     "value": 900,
+     "source": "fb2022",
+     "locator": "Table 3, standard 925: liquidus 900C/1652F (melting range 120 K)",
+     "alt": [
+      {
+       "value": 893,
+       "source": "umicore2021",
+       "locator": "casting grain table, Sterling"
+      },
+      {
+       "value": 899,
+       "source": "eid2023",
+       "locator": "p.1 sterling liquidus 1650F/899C"
+      }
+     ]
+    },
+    "pour_c": {
+     "min": 935,
+     "max": 985,
+     "source": "glines",
+     "locator": "Sterling Silver 'Cast Temp 1715-1805F' (converted)",
+     "alt": [
+      {
+       "value": [
+        923,
+        993
+       ],
+       "source": "derived",
+       "method": "Umicore superheat rule (liquidus 893C +30 large ... +100 small/intricate)"
+      },
+      {
+       "value": 1000,
+       "source": "fb2022",
+       "locator": "investment casting trials: pouring ~100 K above liquidus"
+      }
+     ]
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 482,
+      "max": 538
+     },
+     "thin": {
+      "min": 621,
+      "max": 677
+     },
+     "source": "upm",
+     "locator": "Flask table, 'Sterling Silver', Vacuum Cast: Heavy 900-1000F, Light 1150-1250F",
+     "method": "vacuum",
+     "alt": [
+      {
+       "heavy": {
+        "min": 455,
+        "max": 482
+       },
+       "thin": {
+        "min": 524,
+        "max": 538
+       },
+       "source": "upm",
+       "locator": "same table, Centrifugal Cast",
+       "method": "centrifugal"
+      },
+      {
+       "general": {
+        "value": 500
+       },
+       "source": "fb2010",
+       "locator": "Si-free sterling: flask ~500C (930F); Si-containing: not exceeding ~500-540C"
+      },
+      {
+       "heavy": {
+        "min": 371,
+        "max": 482
+       },
+       "thin": {
+        "min": 482,
+        "max": 538
+       },
+       "source": "kerr_sc20",
+       "locator": "gypsum investment DFU: gents rings heavier 700-900F; ladies/filigree 900-1000F"
+      }
+     ]
+    },
+    "shrinkage_vol_pct": {
+     "min": 5,
+     "max": 6,
+     "source": "bell_sprue",
+     "locator": "'volume difference between liquid and solid of most silver and gold alloys is 5 to 6%' (generic, not alloy-specific)"
+    },
+    "thermal_conductivity_w_mk": {
+     "value": 361,
+     "source": "wiki_tc",
+     "locator": "row 'Silver, sterling' (secondary source, room temperature)"
+    },
+    "specific_heat_j_kgk": {
+     "value": 245,
+     "source": "espi_sterling",
+     "locator": "Specific heat 0.245 kJ/kg K"
+    },
+    "latent_heat_kj_kg": {
+     "value": 109.6,
+     "source": "derived",
+     "method": "mass-weighted rule of mixtures: 0.925*101.6 J/g (Ag, progold2018 Table 15) + 0.075*208.7 J/g (Cu, 13.26 kJ/mol / 63.546 g/mol, wiki_copper); ignores mixing enthalpy"
+    }
+   },
+   "notes": [
+    {
+     "text": "Wide freezing range (~120 K) makes sterling mushy-freezing and prone to shrinkage porosity; feed heavy sections directly.",
+     "source": "fb2022"
+    },
+    {
+     "text": "Firescale = internal Cu oxide; Cu-free/Pd-containing 925 alloys avoid it. Deoxidised grains (Si, Zn) reduce gas porosity and firescale.",
+     "source": "fb2022"
+    },
+    {
+     "text": "Si additions increase fluidity but widen melting range (dT ~150-170 C) and raise shrinkage porosity susceptibility; keep flask <=500-540 C for Si alloys; limit scrap to <=50%.",
+     "source": "fb2010"
+    },
+    {
+     "text": "Si >=0.1% markedly raises hot-tearing susceptibility; Zn raises it less; grain refiners nearly eliminate it.",
+     "source": "progold2009"
+    },
+    {
+     "text": "Zn lowers surface tension and improves form filling but evaporates during melting (high vapour pressure).",
+     "source": "fb2010"
+    }
+   ]
+  },
+  "ag935_argentium": {
+   "name": "Argentium 935 (Ag-Cu-Ge)",
+   "family": "silver",
+   "fineness": 935,
+   "investment": "gypsum",
+   "composition_wt_pct": {
+    "Ag": 93.5
+   },
+   "composition_source": {
+    "source": "rio_a935",
+    "locator": "'Ag 93.5%' (Ge and Cu balance not itemised)"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 10.4,
+     "source": "rio_a935",
+     "locator": "Density 10.4 g/cm3",
+     "alt": [
+      {
+       "value": 10.3,
+       "source": "hs_arg",
+       "locator": "Argentium Sterling density 10.3 g/cm3"
+      }
+     ]
+    },
+    "solidus_c": {
+     "value": 803,
+     "source": "rio_a935",
+     "locator": "Solidus 1477F/803C",
+     "alt": [
+      {
+       "value": 766,
+       "source": "hs_arg",
+       "locator": "melting range 1410-1610F (766-877C)"
+      }
+     ]
+    },
+    "liquidus_c": {
+     "value": 903,
+     "source": "rio_a935",
+     "locator": "Liquidus 1657F/903C",
+     "alt": [
+      {
+       "value": 877,
+       "source": "hs_arg",
+       "locator": "melting range upper bound 877C"
+      }
+     ]
+    },
+    "pour_c": {
+     "min": 960,
+     "max": 1000,
+     "source": "rio_a935",
+     "locator": "Metal temp: thin 1000-980, medium 990-970, thick 980-960C",
+     "by_piece": {
+      "thin": [
+       980,
+       1000
+      ],
+      "medium": [
+       970,
+       990
+      ],
+      "heavy": [
+       960,
+       980
+      ]
+     },
+     "alt": [
+      {
+       "min": 980,
+       "max": 1020,
+       "source": "hs_arg_prod",
+       "locator": "metal temp thin 1020-1010, medium 1000-990, thick 990-980"
+      },
+      {
+       "min": 950,
+       "max": 980,
+       "source": "hs_arg",
+       "locator": "casting range 1740-1780F"
+      }
+     ]
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 480,
+      "max": 520
+     },
+     "thin": {
+      "min": 560,
+      "max": 600
+     },
+     "medium": {
+      "min": 520,
+      "max": 560
+     },
+     "source": "rio_a935",
+     "locator": "Flask temp: thick >1.2mm 480-520C; medium 0.5-1.2mm 520-560C; thin 0.2-0.5mm 560-600C",
+     "alt": [
+      {
+       "general": {
+        "min": 510,
+        "max": 538
+       },
+       "source": "hs_arg",
+       "locator": "flask 950-1000F, do not exceed 1250F"
+      }
+     ]
+    }
+   },
+   "notes": [
+    {
+     "text": "Firestain/firescale-free; quench no sooner than ~15 min after casting to avoid cracking (vs ~3 min for sterling).",
+     "source": "hs_arg"
+    },
+    {
+     "text": "Use at least 50% fresh metal per cast.",
+     "source": "hs_arg"
+    },
+    {
+     "text": "Hold under inert gas ~3 min and cool >=20 min before quench; >=90 min for stone-in-place.",
+     "source": "hs_arg_prod"
+    }
+   ]
+  },
+  "ag960_argentium": {
+   "name": "Argentium 960",
+   "family": "silver",
+   "fineness": 960,
+   "investment": "gypsum",
+   "composition_wt_pct": {
+    "Ag": 96.0
+   },
+   "composition_source": {
+    "source": "argguild_960",
+    "locator": "Silver content 96%"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 10.4,
+     "source": "argguild_960",
+     "locator": "Specific density 10.4 g/cm3"
+    },
+    "solidus_c": {
+     "value": 890,
+     "source": "argguild_960",
+     "locator": "Solidus 890C/1634F"
+    },
+    "liquidus_c": {
+     "value": 920,
+     "source": "argguild_960",
+     "locator": "Liquidus 920C/1688F (melting range 30 C)"
+    }
+   },
+   "notes": [
+    {
+     "text": "Firestain free; suitable for stone-in-place casting. No pour/flask temps found in accessible sources; Argentium 960S casting PDF was image-only.",
+     "source": "argguild_960"
+    }
+   ]
+  },
+  "ag999": {
+   "name": "Fine silver 999",
+   "family": "silver",
+   "fineness": 999,
+   "investment": "gypsum",
+   "composition_wt_pct": {
+    "Ag": 99.9
+   },
+   "composition_source": {
+    "source": "umicore2021",
+    "locator": "Fine Silver 99.9% GRFSW000000"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 10.5,
+     "source": "umicore2021",
+     "locator": "Fine Silver 99.9%",
+     "alt": [
+      {
+       "value": 10.503,
+       "source": "wiki_silver",
+       "locator": "density near r.t. (pure Ag)"
+      }
+     ]
+    },
+    "solidus_c": {
+     "value": 960,
+     "source": "umicore2021",
+     "locator": "Fine Silver solidus=liquidus 960C",
+     "alt": [
+      {
+       "value": 961.78,
+       "source": "wiki_silver",
+       "locator": "melting point"
+      }
+     ]
+    },
+    "liquidus_c": {
+     "value": 960,
+     "source": "umicore2021",
+     "locator": "Fine Silver",
+     "alt": [
+      {
+       "value": 961.78,
+       "source": "wiki_silver",
+       "locator": "melting point"
+      }
+     ]
+    },
+    "pour_c": {
+     "min": 1001.7,
+     "max": 1062.8,
+     "source": "glines",
+     "locator": "Fine Silver 'Cast Temp 1835-1945F' (converted)"
+    },
+    "flask_c": {
+     "general": {
+      "min": 454.4,
+      "max": 648.9
+     },
+     "source": "glines",
+     "locator": "Fine Silver flask 850-1200F (not split by piece type)"
+    },
+    "thermal_conductivity_w_mk": {
+     "value": 429,
+     "source": "wiki_silver",
+     "locator": "infobox (pure Ag, ~300 K)"
+    },
+    "specific_heat_j_kgk": {
+     "value": 235.0,
+     "source": "derived",
+     "method": "molar heat capacity 25.350 J/(mol K) (wiki_silver) / 0.1078682 kg/mol",
+     "alt": [
+      {
+       "value": 230,
+       "source": "progold2018",
+       "locator": "Table 17: Ag 0.23 J/gK at RT (0.28 liquid)"
+      }
+     ]
+    },
+    "latent_heat_kj_kg": {
+     "value": 101.6,
+     "source": "progold2018",
+     "locator": "Table 15 literature value for pure Ag",
+     "alt": [
+      {
+       "value": 104.6,
+       "source": "derived",
+       "method": "11.28 kJ/mol (wiki_silver) / 0.1078682 kg/mol"
+      }
+     ]
+    }
+   },
+   "notes": [
+    {
+     "text": "Pure metal: freezes at a single temperature (skin-freezing), so feeding is by planar front; centreline shrinkage in heavy sections if the feeder freezes first.",
+     "source": "grimwade2002"
+    }
+   ]
+  },
+  "au14y": {
+   "name": "14K yellow gold",
+   "family": "gold",
+   "fineness": 585,
+   "investment": "gypsum",
+   "composition_wt_pct": {
+    "Au": 58.5,
+    "Cu": 27.0,
+    "Ag": 8.3
+   },
+   "composition_source": {
+    "source": "progold2018",
+    "locator": "Table 7 alloy O; remaining 6.2% not itemised in extraction (typically Zn)"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 12.94,
+     "source": "progold2018",
+     "locator": "Table 8 alloy O (14K YG): d_RT",
+     "alt": [
+      {
+       "value": 12.79,
+       "source": "umicore2021",
+       "locator": "14K Yellow GR14YAMP000"
+      }
+     ]
+    },
+    "solidus_c": {
+     "value": 823,
+     "source": "progold2018",
+     "locator": "Table 7 alloy O (14K yellow) Tsol",
+     "alt": [
+      {
+       "value": 870,
+       "source": "umicore2021",
+       "locator": "14K Yellow"
+      }
+     ]
+    },
+    "liquidus_c": {
+     "value": 862,
+     "source": "progold2018",
+     "locator": "Table 7 alloy O (14K yellow) Tliq (dT 38.9 C)",
+     "alt": [
+      {
+       "value": 910,
+       "source": "umicore2021",
+       "locator": "14K Yellow"
+      }
+     ]
+    },
+    "pour_c": {
+     "min": 882.2,
+     "max": 962.8,
+     "source": "glines",
+     "locator": "14K Yellow 'Cast Temp 1620-1765F' (converted)",
+     "alt": [
+      {
+       "value": [
+        940,
+        1010
+       ],
+       "source": "derived",
+       "method": "Umicore superheat rule on Umicore liquidus 910C: +30 (large) to +100 (small/intricate)"
+      }
+     ]
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 482,
+      "max": 538
+     },
+     "thin": {
+      "min": 621,
+      "max": 677
+     },
+     "source": "upm",
+     "locator": "Flask table, '10, 14 & 18K Yellow', Vacuum Cast: Heavy 900-1000F, Light 1150-1250F",
+     "method": "vacuum",
+     "alt": [
+      {
+       "heavy": {
+        "min": 455,
+        "max": 482
+       },
+       "thin": {
+        "min": 524,
+        "max": 538
+       },
+       "source": "upm",
+       "locator": "same table, Centrifugal Cast",
+       "method": "centrifugal"
+      },
+      {
+       "heavy": {
+        "min": 427,
+        "max": 538
+       },
+       "thin": {
+        "min": 593,
+        "max": 704
+       },
+       "source": "stuller_gold",
+       "locator": "'Large pieces (mens rings) 800-1000F; filigree rings 1100-1300F' (converted)"
+      }
+     ]
+    },
+    "shrinkage_vol_pct": {
+     "value": 2.45,
+     "source": "progold2018",
+     "locator": "Table 8/9 (pp.10-11) alloy O: density change solid->liquid at melting, %"
+    },
+    "shrinkage_linear_pct": {
+     "value": 1.5,
+     "source": "derived",
+     "method": "(density change RT->solidus 4.5% from progold2018 Table 8/9 alloy O) / 3 = solid-state linear contraction, isotropic approximation"
+    },
+    "latent_heat_kj_kg": {
+     "value": 72.7,
+     "source": "progold2018",
+     "locator": "Table 15/16 (pp.19-20) alloy O: melting enthalpy 72.7 J/g"
+    }
+   },
+   "notes": [
+    {
+     "text": "High Zn in 14K can cause surface defects; deoxidisers needed for investment casting.",
+     "source": "progold2018"
+    },
+    {
+     "text": "14K alloys show ~30% lower total density variation than 18K, theoretically less shrinkage porosity.",
+     "source": "progold2018"
+    },
+    {
+     "text": "Flask 850F (454C) cited as the reference for 14K yellow.",
+     "source": "hs_jeff"
+    }
+   ]
+  },
+  "au18y": {
+   "name": "18K yellow gold",
+   "family": "gold",
+   "fineness": 750,
+   "investment": "gypsum",
+   "composition_wt_pct": {
+    "Au": 75.0,
+    "Ag": 11.75,
+    "Cu": 12.75
+   },
+   "composition_source": {
+    "source": "progold2018",
+    "locator": "Table 7 alloy J (balance ~0.5% not itemised)"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 15.25,
+     "source": "progold2018",
+     "locator": "Table 8 alloy J (18K YG) d_RT",
+     "alt": [
+      {
+       "value": 15.2,
+       "source": "legor_a183n",
+       "locator": "density"
+      },
+      {
+       "value": 15.32,
+       "source": "umicore2021",
+       "locator": "18K Yellow GR18YY08000"
+      }
+     ]
+    },
+    "solidus_c": {
+     "value": 878,
+     "source": "progold2018",
+     "locator": "Table 7 alloy J Tsol",
+     "alt": [
+      {
+       "value": 875,
+       "source": "legor_a183n",
+       "locator": "Solidus"
+      },
+      {
+       "value": 854,
+       "source": "umicore2021",
+       "locator": "18K Yellow"
+      }
+     ]
+    },
+    "liquidus_c": {
+     "value": 886,
+     "source": "progold2018",
+     "locator": "Table 7 alloy J Tliq",
+     "alt": [
+      {
+       "value": 900,
+       "source": "legor_a183n",
+       "locator": "Liquidus"
+      },
+      {
+       "value": 874,
+       "source": "umicore2021",
+       "locator": "18K Yellow"
+      }
+     ]
+    },
+    "pour_c": {
+     "min": 960,
+     "max": 1030,
+     "source": "legor_a183n",
+     "locator": "Metal temp by thickness: <0.5mm 1000-1030, 0.5-1.2mm 980-1000, >1.2mm 960-980C",
+     "by_piece": {
+      "thin": [
+       1000,
+       1030
+      ],
+      "medium": [
+       980,
+       1000
+      ],
+      "heavy": [
+       960,
+       980
+      ]
+     },
+     "alt": [
+      {
+       "value": 1050,
+       "source": "ott1985",
+       "locator": "'1050C is normally used when casting the 18-carat alloy'"
+      },
+      {
+       "min": 918.3,
+       "max": 979.4,
+       "source": "glines",
+       "locator": "18K Yellow cast 1685-1795F"
+      }
+     ]
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 460,
+      "max": 600
+     },
+     "medium": {
+      "min": 580,
+      "max": 650
+     },
+     "thin": {
+      "min": 660,
+      "max": 720
+     },
+     "source": "legor_a183n",
+     "locator": "Flask temp by thickness: >1.2mm 460-600, 0.5-1.2mm 580-650, <0.5mm 660-720C",
+     "alt": [
+      {
+       "heavy": {
+        "min": 482,
+        "max": 538
+       },
+       "thin": {
+        "min": 621,
+        "max": 677
+       },
+       "source": "upm",
+       "locator": "Flask table, '10, 14 & 18K Yellow', Vacuum Cast: Heavy 900-1000F, Light 1150-1250F",
+       "method": "vacuum",
+       "alt": [
+        {
+         "heavy": {
+          "min": 455,
+          "max": 482
+         },
+         "thin": {
+          "min": 524,
+          "max": 538
+         },
+         "source": "upm",
+         "locator": "same table, Centrifugal Cast",
+         "method": "centrifugal"
+        },
+        {
+         "heavy": {
+          "min": 427,
+          "max": 538
+         },
+         "thin": {
+          "min": 593,
+          "max": 704
+         },
+         "source": "stuller_gold",
+         "locator": "'Large pieces (mens rings) 800-1000F; filigree rings 1100-1300F' (converted)"
+        }
+       ]
+      },
+      {
+       "general": {
+        "value": 600
+       },
+       "source": "ott1985",
+       "locator": "'The flask temperature was 600C'"
+      }
+     ]
+    },
+    "shrinkage_vol_pct": {
+     "value": 3.8,
+     "source": "progold2018",
+     "locator": "Table 8/9 (pp.10-11) alloy J: density change solid->liquid at melting, %",
+     "alt": [
+      {
+       "value": 5.47,
+       "source": "campbell2015",
+       "locator": "Table 7.1 pure Au (reference)"
+      }
+     ]
+    },
+    "shrinkage_linear_pct": {
+     "value": 1.58,
+     "source": "derived",
+     "method": "(density change RT->solidus 4.75% from progold2018 Table 8/9 alloy J) / 3 = solid-state linear contraction, isotropic approximation"
+    },
+    "latent_heat_kj_kg": {
+     "value": 66.8,
+     "source": "progold2018",
+     "locator": "Table 15/16 (pp.19-20) alloy J: melting enthalpy 66.8 J/g"
+    }
+   },
+   "notes": [
+    {
+     "text": "Reaction of melt with CaSO4-bonded investment (SO2 release) is a primary source of gas porosity; avoid excessive casting temperature.",
+     "source": "ott1985"
+    }
+   ]
+  },
+  "au18r": {
+   "name": "18K rose/red gold",
+   "family": "gold",
+   "fineness": 750,
+   "investment": "gypsum",
+   "composition_wt_pct": {
+    "Au": 75.0,
+    "Cu": 21.75,
+    "Ag": 2.5
+   },
+   "composition_source": {
+    "source": "progold2018",
+    "locator": "Table 7 alloy K"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 14.84,
+     "source": "progold2018",
+     "locator": "Table 8 alloy K (18K RG)",
+     "alt": [
+      {
+       "value": 14.9,
+       "source": "legor_or133",
+       "locator": "density"
+      },
+      {
+       "value": 14.7,
+       "source": "rio_104401",
+       "locator": "18K density"
+      },
+      {
+       "value": 15.1,
+       "source": "umicore2021",
+       "locator": "18K Red"
+      }
+     ]
+    },
+    "solidus_c": {
+     "value": 891,
+     "source": "progold2018",
+     "locator": "Table 7 alloy K",
+     "alt": [
+      {
+       "value": 885,
+       "source": "legor_or133",
+       "locator": "Solidus"
+      },
+      {
+       "value": 905,
+       "source": "rio_104401",
+       "locator": "18K"
+      }
+     ]
+    },
+    "liquidus_c": {
+     "value": 900,
+     "source": "progold2018",
+     "locator": "Table 7 alloy K",
+     "alt": [
+      {
+       "value": 900,
+       "source": "legor_or133",
+       "locator": "Liquidus"
+      },
+      {
+       "value": 920,
+       "source": "rio_104401",
+       "locator": "18K"
+      }
+     ]
+    },
+    "pour_c": {
+     "min": 960,
+     "max": 1030,
+     "source": "legor_or133",
+     "locator": "Metal temp: <0.5mm 1000-1030, 0.5-1.2mm 980-1000, >1.2mm 960-980C",
+     "by_piece": {
+      "thin": [
+       1000,
+       1030
+      ],
+      "medium": [
+       980,
+       1000
+      ],
+      "heavy": [
+       960,
+       980
+      ]
+     },
+     "alt": [
+      {
+       "min": 980,
+       "max": 1050,
+       "source": "rio_104401",
+       "locator": "thin 1050-1020, medium 1020-1000, thick 1000-980"
+      },
+      {
+       "min": 968.3,
+       "max": 1032.2,
+       "source": "glines",
+       "locator": "18K Rose cast 1775-1890F"
+      }
+     ]
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 560,
+      "max": 600
+     },
+     "medium": {
+      "min": 600,
+      "max": 650
+     },
+     "thin": {
+      "min": 650,
+      "max": 720
+     },
+     "source": "legor_or133",
+     "locator": "Flask: >1.2mm 560-600, 0.5-1.2mm 600-650, <0.5mm 650-720C",
+     "alt": [
+      {
+       "heavy": {
+        "min": 460,
+        "max": 600
+       },
+       "thin": {
+        "min": 660,
+        "max": 720
+       },
+       "source": "rio_104401",
+       "locator": "thick 460-600, thin 660-720"
+      },
+      {
+       "heavy": {
+        "min": 482,
+        "max": 538
+       },
+       "thin": {
+        "min": 621,
+        "max": 677
+       },
+       "source": "upm",
+       "locator": "Flask table, '10, 14 & 18K Yellow', Vacuum Cast: Heavy 900-1000F, Light 1150-1250F",
+       "method": "vacuum",
+       "alt": [
+        {
+         "heavy": {
+          "min": 455,
+          "max": 482
+         },
+         "thin": {
+          "min": 524,
+          "max": 538
+         },
+         "source": "upm",
+         "locator": "same table, Centrifugal Cast",
+         "method": "centrifugal"
+        },
+        {
+         "heavy": {
+          "min": 427,
+          "max": 538
+         },
+         "thin": {
+          "min": 593,
+          "max": 704
+         },
+         "source": "stuller_gold",
+         "locator": "'Large pieces (mens rings) 800-1000F; filigree rings 1100-1300F' (converted)"
+        }
+       ]
+      }
+     ]
+    },
+    "shrinkage_vol_pct": {
+     "value": 3.29,
+     "source": "progold2018",
+     "locator": "Table 8/9 (pp.10-11) alloy K: density change solid->liquid at melting, %"
+    },
+    "shrinkage_linear_pct": {
+     "value": 1.56,
+     "source": "derived",
+     "method": "(density change RT->solidus 4.68% from progold2018 Table 8/9 alloy K) / 3 = solid-state linear contraction, isotropic approximation"
+    },
+    "latent_heat_kj_kg": {
+     "value": 72.59,
+     "source": "progold2018",
+     "locator": "Table 15/16 (pp.19-20) alloy K: melting enthalpy 72.59 J/g"
+    }
+   },
+   "notes": [
+    {
+     "text": "Order-disorder transformation (DSC peak) in Cu-rich red golds: quench promptly after casting to avoid ordering embrittlement/cracking.",
+     "source": "progold2018"
+    },
+    {
+     "text": "Gravity casting fills ~60% of available mass; vacuum-pressure 81-95% (18K red test pattern).",
+     "source": "progold2018"
+    }
+   ]
+  },
+  "au18w_ni": {
+   "name": "18K white gold (nickel)",
+   "family": "gold",
+   "fineness": 750,
+   "investment": "gypsum",
+   "composition_wt_pct": {
+    "Au": 75.0,
+    "Cu": 14.0,
+    "Ag": 7.5,
+    "Ni": 3.5
+   },
+   "composition_source": {
+    "source": "progold2018",
+    "locator": "Table 7 alloy L (commercial alloy; Ni content low for a Ni-white - verify)"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 14.63,
+     "source": "progold2018",
+     "locator": "Table 8 alloy L (18K WG-Ni)",
+     "alt": [
+      {
+       "value": 14.7,
+       "source": "rio_104405",
+       "locator": "density"
+      },
+      {
+       "value": 14.78,
+       "source": "umicore2021",
+       "locator": "18K Nickel-White"
+      }
+     ]
+    },
+    "solidus_c": {
+     "value": 909,
+     "source": "progold2018",
+     "locator": "Table 7 alloy L",
+     "alt": [
+      {
+       "value": 915,
+       "source": "rio_104405",
+       "locator": "Solidus"
+      },
+      {
+       "value": 916,
+       "source": "umicore2021",
+       "locator": "18K Ni-White"
+      }
+     ]
+    },
+    "liquidus_c": {
+     "value": 937,
+     "source": "progold2018",
+     "locator": "Table 7 alloy L",
+     "alt": [
+      {
+       "value": 940,
+       "source": "rio_104405",
+       "locator": "Liquidus"
+      },
+      {
+       "value": 948,
+       "source": "umicore2021",
+       "locator": "18K Ni-White"
+      }
+     ]
+    },
+    "pour_c": {
+     "min": 1000,
+     "max": 1070,
+     "source": "rio_104405",
+     "locator": "Metal: thin 1070-1040, medium 1040-1020, thick 1020-1000C",
+     "by_piece": {
+      "thin": [
+       1040,
+       1070
+      ],
+      "medium": [
+       1020,
+       1040
+      ],
+      "heavy": [
+       1000,
+       1020
+      ]
+     },
+     "alt": [
+      {
+       "min": 951.7,
+       "max": 1037.8,
+       "source": "glines",
+       "locator": "18K White cast 1745-1900F"
+      }
+     ]
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 460,
+      "max": 600
+     },
+     "medium": {
+      "min": 580,
+      "max": 650
+     },
+     "thin": {
+      "min": 660,
+      "max": 720
+     },
+     "source": "rio_104405",
+     "locator": "Flask: thick >1.2mm 460-600, medium 580-650, thin 660-720C",
+     "alt": [
+      {
+       "heavy": {
+        "min": 566,
+        "max": 593
+       },
+       "thin": {
+        "min": 677,
+        "max": 732
+       },
+       "source": "upm",
+       "locator": "Flask table, '10, 14 & 18K White', Vacuum Cast: Heavy 1050-1100F, Light 1250-1350F",
+       "method": "vacuum",
+       "alt": [
+        {
+         "heavy": {
+          "min": 482,
+          "max": 482
+         },
+         "thin": {
+          "min": 538,
+          "max": 566
+         },
+         "source": "upm",
+         "locator": "same table, Centrifugal Cast",
+         "method": "centrifugal"
+        }
+       ]
+      }
+     ]
+    },
+    "shrinkage_vol_pct": {
+     "value": 2.95,
+     "source": "progold2018",
+     "locator": "Table 8/9 (pp.10-11) alloy L: density change solid->liquid at melting, %"
+    },
+    "shrinkage_linear_pct": {
+     "value": 1.58,
+     "source": "derived",
+     "method": "(density change RT->solidus 4.75% from progold2018 Table 8/9 alloy L) / 3 = solid-state linear contraction, isotropic approximation"
+    },
+    "latent_heat_kj_kg": {
+     "value": 73.12,
+     "source": "progold2018",
+     "locator": "Table 15/16 (pp.19-20) alloy L: melting enthalpy 73.12 J/g"
+    }
+   },
+   "notes": [
+    {
+     "text": "Ni-based white golds are more susceptible to shrinkage porosity than Ni/Pd-free alternatives; cast with higher flask temps.",
+     "source": "stuller_gold"
+    },
+    {
+     "text": "White golds generally require flask temperatures at the high end of recommendations.",
+     "source": "stuller_gold"
+    },
+    {
+     "text": "Use higher fresh-metal ratio for white gold (75% new / 25% scrap).",
+     "source": "hs_jeff"
+    }
+   ]
+  },
+  "au18w_pd": {
+   "name": "18K white gold (palladium, Ni-free)",
+   "family": "gold",
+   "fineness": 750,
+   "investment": "gypsum",
+   "composition_wt_pct": {
+    "Au": 75.0,
+    "Ag": 10.5,
+    "Pd": 6.45,
+    "Cu": 5.55,
+    "Zn": 2.5
+   },
+   "composition_source": {
+    "source": "derived",
+    "method": "0.25 x Legor NF509 master alloy (Ag 42, Pd 25.8, Cu 22.2, Zn 10) + Au 75"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 15.7,
+     "source": "legor_nf509",
+     "locator": "Density",
+     "alt": [
+      {
+       "value": 15.76,
+       "source": "progold2018",
+       "locator": "alloy M"
+      },
+      {
+       "value": 15.8,
+       "source": "umicore2021",
+       "locator": "18K Pd-White"
+      }
+     ]
+    },
+    "solidus_c": {
+     "value": 905,
+     "source": "legor_nf509",
+     "locator": "Solidus",
+     "alt": [
+      {
+       "value": 1009,
+       "source": "progold2018",
+       "locator": "alloy M"
+      },
+      {
+       "value": 1064,
+       "source": "umicore2021",
+       "locator": "18K Pd-White"
+      }
+     ]
+    },
+    "liquidus_c": {
+     "value": 960,
+     "source": "legor_nf509",
+     "locator": "Liquidus",
+     "alt": [
+      {
+       "value": 1079,
+       "source": "progold2018",
+       "locator": "alloy M"
+      },
+      {
+       "value": 1074,
+       "source": "umicore2021",
+       "locator": "18K Pd-White"
+      }
+     ]
+    },
+    "pour_c": {
+     "min": 1020,
+     "max": 1090,
+     "source": "legor_nf509",
+     "locator": "Metal: <0.5mm 1060-1090, 0.5-1.2 1040-1060, >1.2mm 1020-1040C",
+     "by_piece": {
+      "thin": [
+       1060,
+       1090
+      ],
+      "medium": [
+       1040,
+       1060
+      ],
+      "heavy": [
+       1020,
+       1040
+      ]
+     }
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 600,
+      "max": 660
+     },
+     "medium": {
+      "min": 660,
+      "max": 700
+     },
+     "thin": {
+      "min": 700,
+      "max": 730
+     },
+     "source": "legor_nf509",
+     "locator": "Flask: >1.2mm 600-660, 0.5-1.2 660-700, <0.5mm 700-730C"
+    },
+    "shrinkage_vol_pct": {
+     "value": 3.34,
+     "source": "progold2018",
+     "locator": "Table 8/9 alloy M (18K WG-Pd) solid->liquid density change %"
+    },
+    "shrinkage_linear_pct": {
+     "value": 1.52,
+     "source": "derived",
+     "method": "progold2018 alloy M RT->solidus density change 4.56% / 3"
+    }
+   },
+   "notes": [
+    {
+     "text": "Melting range of Pd-white golds varies strongly with Pd content (liquidus 960-1079 C across sources); take liquidus from the actual alloy datasheet.",
+     "source": "derived",
+     "method": "comparison of legor_nf509, progold2018, umicore2021"
+    }
+   ]
+  },
+  "au14w_ni": {
+   "name": "14K white gold (nickel)",
+   "family": "gold",
+   "fineness": 585,
+   "investment": "gypsum",
+   "composition_wt_pct": {},
+   "composition_source": {
+    "source": null,
+    "locator": "not found with numbers"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 12.73,
+     "source": "umicore2021",
+     "locator": "14K Nickel-White GR14KW601000"
+    },
+    "solidus_c": {
+     "value": 1000,
+     "source": "umicore2021",
+     "locator": "14K Nickel-White"
+    },
+    "liquidus_c": {
+     "value": 1030,
+     "source": "umicore2021",
+     "locator": "14K Nickel-White"
+    },
+    "pour_c": {
+     "min": 1026.7,
+     "max": 1087.8,
+     "source": "glines",
+     "locator": "14K White cast 1880-1990F (converted)"
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 566,
+      "max": 593
+     },
+     "thin": {
+      "min": 677,
+      "max": 732
+     },
+     "source": "upm",
+     "locator": "Flask table, '10, 14 & 18K White', Vacuum Cast: Heavy 1050-1100F, Light 1250-1350F",
+     "method": "vacuum",
+     "alt": [
+      {
+       "heavy": {
+        "min": 482,
+        "max": 482
+       },
+       "thin": {
+        "min": 538,
+        "max": 566
+       },
+       "source": "upm",
+       "locator": "same table, Centrifugal Cast",
+       "method": "centrifugal"
+      }
+     ]
+    }
+   },
+   "notes": [
+    {
+     "text": "White gold: use 75% new / 25% scrap.",
+     "source": "hs_jeff"
+    },
+    {
+     "text": "White golds need flask temperatures at the high end of the range.",
+     "source": "stuller_gold"
+    }
+   ]
+  },
+  "au14w_pd": {
+   "name": "14K white gold (palladium, Ni-free)",
+   "family": "gold",
+   "fineness": 585,
+   "investment": "gypsum",
+   "composition_wt_pct": {
+    "Au": 58.5,
+    "Ag": 25.73,
+    "Pd": 12.87,
+    "Zn": 1.66,
+    "Cu": 1.25
+   },
+   "composition_source": {
+    "source": "derived",
+    "method": "0.415 x Legor NF508 master alloy (Ag 62, Pd 31, Zn 4, Cu 3) + Au 58.5"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 14.4,
+     "source": "legor_nf508",
+     "locator": "Density (585)",
+     "alt": [
+      {
+       "value": 14.22,
+       "source": "umicore2021",
+       "locator": "14K Pd-White"
+      }
+     ]
+    },
+    "solidus_c": {
+     "value": 1090,
+     "source": "legor_nf508",
+     "locator": "Solidus",
+     "alt": [
+      {
+       "value": 1079,
+       "source": "umicore2021",
+       "locator": "14K Pd-White"
+      }
+     ]
+    },
+    "liquidus_c": {
+     "value": 1170,
+     "source": "legor_nf508",
+     "locator": "Liquidus",
+     "alt": [
+      {
+       "value": 1094,
+       "source": "umicore2021",
+       "locator": "14K Pd-White"
+      }
+     ]
+    },
+    "pour_c": {
+     "min": 1220,
+     "max": 1290,
+     "source": "legor_nf508",
+     "locator": "Metal: <0.5mm 1260-1290, 0.5-1.2 1240-1260, >1.2mm 1220-1240C",
+     "by_piece": {
+      "thin": [
+       1260,
+       1290
+      ],
+      "medium": [
+       1240,
+       1260
+      ],
+      "heavy": [
+       1220,
+       1240
+      ]
+     }
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 600,
+      "max": 640
+     },
+     "medium": {
+      "min": 640,
+      "max": 660
+     },
+     "thin": {
+      "min": 660,
+      "max": 730
+     },
+     "source": "legor_nf508",
+     "locator": "Flask: >1.2mm 600-640, 0.5-1.2 640-660, <0.5mm 660-730C"
+    }
+   },
+   "notes": [
+    {
+     "text": "Pour temperatures (1220-1290 C) fall inside the CaSO4 decomposition window (900-1260 C): high SO2 gas-porosity risk in gypsum investment; consider phosphate/special investment.",
+     "source": "phet2017"
+    }
+   ]
+  },
+  "au10y": {
+   "name": "10K yellow gold",
+   "family": "gold",
+   "fineness": 417,
+   "investment": "gypsum",
+   "composition_wt_pct": {},
+   "composition_source": {
+    "source": null,
+    "locator": "not captured"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 11.28,
+     "source": "umicore2021",
+     "locator": "10K Yellow"
+    },
+    "solidus_c": {
+     "value": 881,
+     "source": "umicore2021",
+     "locator": "10K Yellow"
+    },
+    "liquidus_c": {
+     "value": 908,
+     "source": "umicore2021",
+     "locator": "10K Yellow"
+    },
+    "pour_c": {
+     "min": 926.7,
+     "max": 987.8,
+     "source": "glines",
+     "locator": "10K Yellow cast 1700-1810F (converted)"
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 482,
+      "max": 538
+     },
+     "thin": {
+      "min": 621,
+      "max": 677
+     },
+     "source": "upm",
+     "locator": "Flask table, '10, 14 & 18K Yellow', Vacuum Cast: Heavy 900-1000F, Light 1150-1250F",
+     "method": "vacuum",
+     "alt": [
+      {
+       "heavy": {
+        "min": 455,
+        "max": 482
+       },
+       "thin": {
+        "min": 524,
+        "max": 538
+       },
+       "source": "upm",
+       "locator": "same table, Centrifugal Cast",
+       "method": "centrifugal"
+      },
+      {
+       "heavy": {
+        "min": 427,
+        "max": 538
+       },
+       "thin": {
+        "min": 593,
+        "max": 704
+       },
+       "source": "stuller_gold",
+       "locator": "'Large pieces (mens rings) 800-1000F; filigree rings 1100-1300F' (converted)"
+      }
+     ]
+    }
+   },
+   "notes": []
+  },
+  "pt950ru": {
+   "name": "Platinum 950 / Ruthenium",
+   "family": "platinum",
+   "fineness": 950,
+   "investment": "phosphate",
+   "composition_wt_pct": {
+    "Pt": 95.0,
+    "Ru": 5.0
+   },
+   "composition_source": {
+    "source": "maerz2004",
+    "locator": "Pt950/Ru"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 20.7,
+     "source": "maerz2004",
+     "locator": "Pt950/Ru density",
+     "alt": [
+      {
+       "value": 20.7,
+       "source": "umicore2021",
+       "locator": "95Pt-5Ru GR95WRU000"
+      }
+     ]
+    },
+    "solidus_c": {
+     "value": 1780,
+     "source": "maerz2004",
+     "locator": "melting range 1780-1795C",
+     "alt": [
+      {
+       "value": 1780,
+       "source": "umicore2021",
+       "locator": "95Pt-5Ru"
+      }
+     ]
+    },
+    "liquidus_c": {
+     "value": 1795,
+     "source": "maerz2004",
+     "locator": "melting range 1780-1795C",
+     "alt": [
+      {
+       "value": 1795,
+       "source": "umicore2021",
+       "locator": "95Pt-5Ru"
+      },
+      {
+       "value": 1818,
+       "source": "derived",
+       "method": "klotz2014sfs p.152: 'Ru increases the melting point, about 50 K for 5 mass-% Ru' applied to pure Pt 1768.3C (wiki_platinum)"
+      }
+     ]
+    },
+    "pour_c": {
+     "min": 1950,
+     "max": 2040,
+     "source": "heiss2015",
+     "locator": "Pt-5Ru cast at 1950-2040C (~100C above Pt-5Co)",
+     "alt": [
+      {
+       "value": [
+        1980,
+        1995
+       ],
+       "source": "derived",
+       "method": "maerz2007 p.321: superheat 200C over 1780-1795C melting range"
+      }
+     ]
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 760,
+      "max": 870
+     },
+     "thin": {
+      "min": 950,
+      "max": 950
+     },
+     "source": "maerz2007",
+     "locator": "heavy/regular: p.321 'flask ~760-870C'; thin: klotz2011 'optimum flask temperature is 950C for filigree items'",
+     "thin_source": "klotz2011",
+     "alt": [
+      {
+       "heavy": {
+        "min": 704,
+        "max": 860
+       },
+       "thin": {
+        "min": 1010,
+        "max": 1010
+       },
+       "source": "rio_pt",
+       "locator": "Pt-Ir: heavy mountings 1300-1500F, light findings 1850F"
+      }
+     ]
+    },
+    "latent_heat_kj_kg": {
+     "value": 122,
+     "source": "klotz2014sfs",
+     "locator": "Table 2, 95Pt5Ru melting enthalpy 122 (printed 'J/(g K)', read as J/g)"
+    },
+    "specific_heat_j_kgk": {
+     "value": 132.6,
+     "source": "derived",
+     "method": "pure Pt: 25.86 J/(mol K) / 0.195084 kg/mol (wiki_platinum); alloy value not found"
+    }
+   },
+   "notes": [
+    {
+     "text": "Pronounced tendency to micro-shrinkage that is hard to avoid; shrinkage porosity decreases with higher casting and flask temperature.",
+     "source": "heiss2015"
+    },
+    {
+     "text": "Poor form filling of filigree below ~800C flask; best surface quality (no investment reaction).",
+     "source": "klotz2011"
+    },
+    {
+     "text": "Casting 'a little more difficult and often fine detail will not fill'.",
+     "source": "maerz2004"
+    },
+    {
+     "text": "Gypsum investment unusable; phosphate/silica Pt investment required.",
+     "source": "rio_pt"
+    }
+   ]
+  },
+  "pt950co": {
+   "name": "Platinum 950 / Cobalt",
+   "family": "platinum",
+   "fineness": 950,
+   "investment": "phosphate",
+   "composition_wt_pct": {
+    "Pt": 95.0,
+    "Co": 5.0
+   },
+   "composition_source": {
+    "source": "maerz2004",
+    "locator": "Pt950/Co"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 20.8,
+     "source": "maerz2004",
+     "locator": "Pt950/Co density"
+    },
+    "solidus_c": {
+     "value": 1750,
+     "source": "maerz2004",
+     "locator": "melting range 1750-1765C"
+    },
+    "liquidus_c": {
+     "value": 1765,
+     "source": "maerz2004",
+     "locator": "melting range 1750-1765C",
+     "alt": [
+      {
+       "value": 1668,
+       "source": "derived",
+       "method": "klotz2014sfs p.152: Co lowers melting point ~100 K for 5 mass-%, applied to Pt 1768.3C; melting range ~15 K"
+      }
+     ]
+    },
+    "pour_c": {
+     "min": 1850,
+     "max": 1950,
+     "source": "heiss2015",
+     "locator": "Pt-5Co casting temperatures 1850-1950C; complete filling above 1850C (centrifugal)"
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 550,
+      "max": 850
+     },
+     "thin": {
+      "min": 850,
+      "max": 850
+     },
+     "source": "heiss2015",
+     "locator": "complete form filling at flask >550C (centrifugal); thin: klotz2011 'excellent results for a flask temperature of 850C'",
+     "thin_source": "klotz2011"
+    },
+    "latent_heat_kj_kg": {
+     "value": 121,
+     "source": "klotz2014sfs",
+     "locator": "Table 2, 95Pt5Co melting enthalpy 121"
+    }
+   },
+   "notes": [
+    {
+     "text": "Best Pt casting alloy: excellent fluidity/form filling, even filigree at low flask temps; slightly ferromagnetic; oxidises around 1000C.",
+     "source": "maerz2004"
+    },
+    {
+     "text": "Few but large pores; mostly microscopic gas pores under optimal conditions.",
+     "source": "heiss2015"
+    }
+   ]
+  },
+  "pd950": {
+   "name": "Palladium 950",
+   "family": "palladium",
+   "fineness": 950,
+   "investment": "phosphate",
+   "composition_wt_pct": {
+    "Pd": 95.0
+   },
+   "composition_source": {
+    "source": "hs_trupd",
+    "locator": "TruPd 950 (minor elements not disclosed)"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 11.84,
+     "source": "hs_trupd",
+     "locator": "Density 11.84 g/cm3"
+    },
+    "solidus_c": {
+     "value": 1350,
+     "source": "hs_trupd",
+     "locator": "Melting range 1350-1380C (Ga-type proprietary alloy)"
+    },
+    "liquidus_c": {
+     "value": 1380,
+     "source": "hs_trupd",
+     "locator": "Melting range 1350-1380C",
+     "alt": [
+      {
+       "min": 1560,
+       "max": 1570,
+       "source": "klotz2019pd",
+       "locator": "PdRu-based new alloys: typical liquidus 1560-1570C"
+      }
+     ]
+    },
+    "pour_c": {
+     "min": 1550,
+     "max": 1600,
+     "source": "hs_trupd",
+     "locator": "Casting temperature 1550-1600C",
+     "alt": [
+      {
+       "value": [
+        1640,
+        1650
+       ],
+       "source": "derived",
+       "method": "klotz2019pd: melt overheated ~80C above 1560-1570C liquidus"
+      }
+     ]
+    },
+    "flask_c": {
+     "general": {
+      "min": 675,
+      "max": 730
+     },
+     "source": "hs_trupd",
+     "locator": "Flask 1250-1350F (675-730C), not split by piece type",
+     "alt": [
+      {
+       "general": {
+        "value": 650
+       },
+       "source": "klotz2019pd",
+       "locator": "flask 650C in most trials"
+      },
+      {
+       "general": {
+        "min": 650,
+        "max": 1000
+       },
+       "source": "fb2009pd",
+       "locator": "flask range tested 650-1000C"
+      }
+     ]
+    },
+    "specific_heat_j_kgk": {
+     "value": 244.1,
+     "source": "derived",
+     "method": "pure Pd: 25.98 J/(mol K) / 0.10642 kg/mol (wiki_palladium); alloy value not found"
+    },
+    "latent_heat_kj_kg": {
+     "value": 157.3,
+     "source": "derived",
+     "method": "pure Pd: 16.74 kJ/mol / 0.10642 kg/mol (wiki_palladium); alloy value not found"
+    }
+   },
+   "notes": [
+    {
+     "text": "Treat as a Pt-type alloy: phosphate investment, carbon-free crucibles, argon cover to prevent gas porosity.",
+     "source": "hs_trupd"
+    },
+    {
+     "text": "Pd melts catalyse decomposition of silica refractories and absorb gases (H/O) -> porosity risk.",
+     "source": "fb2009pd"
+    },
+    {
+     "text": "Binary 950PdRu has very limited form filling; Fe additions caused heavy gas porosity.",
+     "source": "klotz2019pd"
+    }
+   ]
+  },
+  "cu_c87500_si_brass": {
+   "name": "Silicon brass/bronze C87500",
+   "family": "copper",
+   "fineness": null,
+   "investment": "gypsum",
+   "composition_wt_pct": {
+    "Cu": 82,
+    "Zn": 14,
+    "Si": 4
+   },
+   "composition_source": {
+    "source": "azom_c87500",
+    "locator": "Chemical composition (nominal)"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 8.28,
+     "source": "stpaul",
+     "locator": "C87500 0.299 lb/in3 (converted)",
+     "alt": [
+      {
+       "value": 8.28,
+       "source": "azom_c87500",
+       "locator": "Physical properties"
+      }
+     ]
+    },
+    "solidus_c": {
+     "value": 821.1,
+     "source": "stpaul",
+     "locator": "C87500 solidus 1510F"
+    },
+    "liquidus_c": {
+     "value": 917.2,
+     "source": "stpaul",
+     "locator": "C87500 liquidus 1683F"
+    },
+    "pour_c": {
+     "min": 982.2,
+     "max": 1093.3,
+     "source": "stpaul",
+     "locator": "Pouring temp: heavy 1800-1900F, light 1900-2000F (sand foundry)",
+     "by_piece": {
+      "heavy": [
+       982.2,
+       1037.8
+      ],
+      "thin": [
+       1037.8,
+       1093.3
+      ]
+     }
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 566,
+      "max": 593
+     },
+     "thin": {
+      "min": 677,
+      "max": 732
+     },
+     "source": "upm",
+     "locator": "Flask table note: Brass & Bronze use the same temperatures as 10/14/18K white gold; Vacuum Cast Heavy/Light",
+     "method": "vacuum",
+     "alt": [
+      {
+       "heavy": {
+        "min": 482,
+        "max": 482
+       },
+       "thin": {
+        "min": 538,
+        "max": 566
+       },
+       "source": "upm",
+       "locator": "same, Centrifugal Cast",
+       "method": "centrifugal"
+      }
+     ]
+    },
+    "shrinkage_linear_pct": {
+     "value": 1.95,
+     "source": "stpaul",
+     "locator": "patternmakers shrinkage 15/64 in/ft"
+    },
+    "thermal_conductivity_w_mk": {
+     "value": 27.7,
+     "source": "stpaul",
+     "locator": "16 Btu/ft h F (converted)",
+     "alt": [
+      {
+       "value": 26.0,
+       "source": "azom_c87500",
+       "locator": "thermal properties"
+      }
+     ]
+    },
+    "specific_heat_j_kgk": {
+     "value": 376.8,
+     "source": "stpaul",
+     "locator": "C87500 0.09 Btu/lb F (converted)"
+    },
+    "shrinkage_vol_pct": {
+     "value": 5.3,
+     "source": "campbell2015",
+     "locator": "Table 7.1: pure Cu volume change on solidification 5.30% (pure-metal reference, not alloy)",
+     "note": "pure Cu reference"
+    }
+   },
+   "notes": [
+    {
+     "text": "Fluidity high, gassing medium, drossing low.",
+     "source": "stpaul"
+    }
+   ]
+  },
+  "cu_c87600_si_bronze": {
+   "name": "Silicon bronze C87600",
+   "family": "copper",
+   "fineness": null,
+   "investment": "gypsum",
+   "composition_wt_pct": {
+    "Cu": 88.0,
+    "Zn": 5.5,
+    "Si": 4.5
+   },
+   "composition_source": {
+    "source": "derived",
+    "method": "midpoints of stpaul C87600 limits: Cu 88 min, Zn 4-7, Si 3.5-5.5 (sum ~98; balance is Cu tolerance)"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 8.3,
+     "source": "stpaul",
+     "locator": "C87600 0.300 lb/in3"
+    },
+    "solidus_c": {
+     "value": 821.1,
+     "source": "stpaul",
+     "locator": "C87600 solidus 1510F"
+    },
+    "liquidus_c": {
+     "value": 971.1,
+     "source": "stpaul",
+     "locator": "C87600 liquidus 1780F"
+    },
+    "pour_c": {
+     "min": 1010.0,
+     "max": 1176.7,
+     "source": "stpaul",
+     "locator": "heavy 1850-2000F, light 2000-2150F",
+     "by_piece": {
+      "heavy": [
+       1010.0,
+       1093.3
+      ],
+      "thin": [
+       1093.3,
+       1176.7
+      ]
+     }
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 566,
+      "max": 593
+     },
+     "thin": {
+      "min": 677,
+      "max": 732
+     },
+     "source": "upm",
+     "locator": "Flask table note: Brass & Bronze use the same temperatures as 10/14/18K white gold; Vacuum Cast Heavy/Light",
+     "method": "vacuum",
+     "alt": [
+      {
+       "heavy": {
+        "min": 482,
+        "max": 482
+       },
+       "thin": {
+        "min": 538,
+        "max": 566
+       },
+       "source": "upm",
+       "locator": "same, Centrifugal Cast",
+       "method": "centrifugal"
+      }
+     ]
+    },
+    "shrinkage_linear_pct": {
+     "value": 2.08,
+     "source": "stpaul",
+     "locator": "patternmakers shrinkage 1/4 in/ft"
+    },
+    "thermal_conductivity_w_mk": {
+     "value": 28.4,
+     "source": "stpaul",
+     "locator": "16.4 Btu/ft h F"
+    },
+    "specific_heat_j_kgk": {
+     "value": 376.8,
+     "source": "stpaul",
+     "locator": "C87600 0.09 Btu/lb F (converted)"
+    },
+    "shrinkage_vol_pct": {
+     "value": 5.3,
+     "source": "campbell2015",
+     "locator": "Table 7.1: pure Cu volume change on solidification 5.30% (pure-metal reference, not alloy)",
+     "note": "pure Cu reference"
+    }
+   },
+   "notes": [
+    {
+     "text": "Fluidity high; gassing HIGH - degas/deoxidise, avoid overheating.",
+     "source": "stpaul"
+    }
+   ]
+  },
+  "cu_c90500_tin_bronze": {
+   "name": "Tin bronze C90500 (88-10-2)",
+   "family": "copper",
+   "fineness": null,
+   "investment": "gypsum",
+   "composition_wt_pct": {
+    "Cu": 88,
+    "Sn": 10,
+    "Zn": 2
+   },
+   "composition_source": {
+    "source": "derived",
+    "method": "midpoints of concast/ASTM B505 limits Cu 86-89, Sn 9-11, Zn 1-3"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 8.72,
+     "source": "concast",
+     "locator": "C90500 8.72 g/cm3"
+    },
+    "solidus_c": {
+     "value": 854,
+     "source": "concast",
+     "locator": "C90500 1570F"
+    },
+    "liquidus_c": {
+     "value": 999,
+     "source": "concast",
+     "locator": "C90500 1830F"
+    },
+    "pour_c": {
+     "min": 1037.8,
+     "max": 1148.9,
+     "source": "stpaul",
+     "locator": "C90500 heavy castings 1900-2100F (light-casting value printed '2000-3000F' is evidently a typo, omitted)"
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 566,
+      "max": 593
+     },
+     "thin": {
+      "min": 677,
+      "max": 732
+     },
+     "source": "upm",
+     "locator": "Flask table note: Brass & Bronze use the same temperatures as 10/14/18K white gold; Vacuum Cast Heavy/Light",
+     "method": "vacuum",
+     "alt": [
+      {
+       "heavy": {
+        "min": 482,
+        "max": 482
+       },
+       "thin": {
+        "min": 538,
+        "max": 566
+       },
+       "source": "upm",
+       "locator": "same, Centrifugal Cast",
+       "method": "centrifugal"
+      }
+     ]
+    },
+    "shrinkage_linear_pct": {
+     "value": 1.56,
+     "source": "stpaul",
+     "locator": "3/16 in/ft"
+    },
+    "thermal_conductivity_w_mk": {
+     "value": 74.8,
+     "source": "concast",
+     "locator": "43.2 Btu/ft h F = 74.8 W/mK"
+    },
+    "specific_heat_j_kgk": {
+     "value": 377.1,
+     "source": "concast",
+     "locator": "377.1 J/kg K"
+    },
+    "shrinkage_vol_pct": {
+     "value": 5.3,
+     "source": "campbell2015",
+     "locator": "Table 7.1: pure Cu volume change on solidification 5.30% (pure-metal reference, not alloy)",
+     "note": "pure Cu reference"
+    }
+   },
+   "notes": [
+    {
+     "text": "Wide freezing range (~145 K): mushy solidification, prone to dispersed shrinkage porosity; fluidity medium.",
+     "source": "concast"
+    }
+   ]
+  },
+  "cu_c92200_tin_bronze": {
+   "name": "Leaded tin bronze C92200 (Navy M)",
+   "family": "copper",
+   "fineness": null,
+   "investment": "gypsum",
+   "composition_wt_pct": {
+    "Cu": 88,
+    "Sn": 6,
+    "Pb": 1.5,
+    "Zn": 4.5
+   },
+   "composition_source": {
+    "source": "derived",
+    "method": "midpoints of stpaul limits Cu 86-90, Sn 5.5-6.5, Pb 1-2, Zn 3-5"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 8.64,
+     "source": "stpaul",
+     "locator": "0.312 lb/in3"
+    },
+    "solidus_c": {
+     "value": 825.6,
+     "source": "stpaul",
+     "locator": "1518F (labels swapped on page)"
+    },
+    "liquidus_c": {
+     "value": 987.8,
+     "source": "stpaul",
+     "locator": "1810F"
+    },
+    "pour_c": {
+     "min": 1037.8,
+     "max": 1148.9,
+     "source": "stpaul",
+     "locator": "heavy 1900-2100F"
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 566,
+      "max": 593
+     },
+     "thin": {
+      "min": 677,
+      "max": 732
+     },
+     "source": "upm",
+     "locator": "Flask table note: Brass & Bronze use the same temperatures as 10/14/18K white gold; Vacuum Cast Heavy/Light",
+     "method": "vacuum",
+     "alt": [
+      {
+       "heavy": {
+        "min": 482,
+        "max": 482
+       },
+       "thin": {
+        "min": 538,
+        "max": 566
+       },
+       "source": "upm",
+       "locator": "same, Centrifugal Cast",
+       "method": "centrifugal"
+      }
+     ]
+    },
+    "shrinkage_linear_pct": {
+     "value": 1.56,
+     "source": "stpaul",
+     "locator": "3/16 in/ft"
+    },
+    "thermal_conductivity_w_mk": {
+     "value": 69.6,
+     "source": "stpaul",
+     "locator": "40.2 Btu/ft h F"
+    },
+    "specific_heat_j_kgk": {
+     "value": 376.8,
+     "source": "stpaul",
+     "locator": "C92200 0.09 Btu/lb F (converted)"
+    },
+    "shrinkage_vol_pct": {
+     "value": 5.3,
+     "source": "campbell2015",
+     "locator": "Table 7.1: pure Cu volume change on solidification 5.30% (pure-metal reference, not alloy)",
+     "note": "pure Cu reference"
+    }
+   },
+   "notes": [
+    {
+     "text": "Contains lead - not for skin-contact jewellery.",
+     "source": "stpaul"
+    }
+   ]
+  },
+  "cu_c83600_red_brass": {
+   "name": "Leaded red brass C83600 (85-5-5-5)",
+   "family": "copper",
+   "fineness": null,
+   "investment": "gypsum",
+   "composition_wt_pct": {
+    "Cu": 85,
+    "Sn": 5,
+    "Pb": 5,
+    "Zn": 5
+   },
+   "composition_source": {
+    "source": "stpaul",
+    "locator": "nominal"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 8.8,
+     "source": "stpaul",
+     "locator": "0.318 lb/in3"
+    },
+    "solidus_c": {
+     "value": 853.3,
+     "source": "stpaul",
+     "locator": "1568F"
+    },
+    "liquidus_c": {
+     "value": 1009.4,
+     "source": "stpaul",
+     "locator": "1849F"
+    },
+    "pour_c": {
+     "min": 1065.6,
+     "max": 1287.8,
+     "source": "stpaul",
+     "locator": "heavy 1950-2150F, light 2100-2350F",
+     "by_piece": {
+      "heavy": [
+       1065.6,
+       1176.7
+      ],
+      "thin": [
+       1148.9,
+       1287.8
+      ]
+     }
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 566,
+      "max": 593
+     },
+     "thin": {
+      "min": 677,
+      "max": 732
+     },
+     "source": "upm",
+     "locator": "Flask table note: Brass & Bronze use the same temperatures as 10/14/18K white gold; Vacuum Cast Heavy/Light",
+     "method": "vacuum",
+     "alt": [
+      {
+       "heavy": {
+        "min": 482,
+        "max": 482
+       },
+       "thin": {
+        "min": 538,
+        "max": 566
+       },
+       "source": "upm",
+       "locator": "same, Centrifugal Cast",
+       "method": "centrifugal"
+      }
+     ]
+    },
+    "shrinkage_linear_pct": {
+     "value": 1.43,
+     "source": "stpaul",
+     "locator": "11/64 in/ft"
+    },
+    "thermal_conductivity_w_mk": {
+     "value": 72.0,
+     "source": "stpaul",
+     "locator": "41.6 Btu/ft h F"
+    },
+    "specific_heat_j_kgk": {
+     "value": 376.8,
+     "source": "stpaul",
+     "locator": "C83600 0.09 Btu/lb F (converted)"
+    },
+    "shrinkage_vol_pct": {
+     "value": 5.3,
+     "source": "campbell2015",
+     "locator": "Table 7.1: pure Cu volume change on solidification 5.30% (pure-metal reference, not alloy)",
+     "note": "pure Cu reference"
+    }
+   },
+   "notes": [
+    {
+     "text": "5% Pb: unsuitable for jewellery worn on skin; fluidity medium, gassing medium.",
+     "source": "stpaul"
+    }
+   ]
+  },
+  "cu_c85700_yellow_brass": {
+   "name": "Leaded yellow brass C85700",
+   "family": "copper",
+   "fineness": null,
+   "investment": "gypsum",
+   "composition_wt_pct": {
+    "Cu": 61,
+    "Zn": 36,
+    "Pb": 1.15,
+    "Sn": 1.0
+   },
+   "composition_source": {
+    "source": "derived",
+    "method": "midpoints of concast C85700 limits Cu 58-64, Pb 0.8-1.5, Sn 0.5-1.5, Zn 32-40 (normalised approx.)"
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 8.41,
+     "source": "concast",
+     "locator": "C85700 8.41 g/cm3"
+    },
+    "solidus_c": {
+     "value": 913,
+     "source": "concast",
+     "locator": "C85700 1675F"
+    },
+    "liquidus_c": {
+     "value": 941,
+     "source": "concast",
+     "locator": "C85700 1725F"
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 566,
+      "max": 593
+     },
+     "thin": {
+      "min": 677,
+      "max": 732
+     },
+     "source": "upm",
+     "locator": "Flask table note: Brass & Bronze use the same temperatures as 10/14/18K white gold; Vacuum Cast Heavy/Light",
+     "method": "vacuum",
+     "alt": [
+      {
+       "heavy": {
+        "min": 482,
+        "max": 482
+       },
+       "thin": {
+        "min": 538,
+        "max": 566
+       },
+       "source": "upm",
+       "locator": "same, Centrifugal Cast",
+       "method": "centrifugal"
+      }
+     ]
+    },
+    "shrinkage_linear_pct": {
+     "value": 1.56,
+     "source": "concast",
+     "locator": "C85700 patternmakers 3/16 in/ft"
+    },
+    "thermal_conductivity_w_mk": {
+     "value": 83.9,
+     "source": "concast",
+     "locator": "C85700 83.9 W/mK"
+    },
+    "specific_heat_j_kgk": {
+     "value": 377.1,
+     "source": "concast",
+     "locator": "C85700"
+    }
+   },
+   "notes": [
+    {
+     "text": "Zn boils at 907 C, below brass pouring temperatures: zinc fuming/flare, Zn loss and oxide/gas porosity; keep superheat low and cover melt.",
+     "source": "wiki_zinc"
+    },
+    {
+     "text": "Drossing high; solidification shrinkage medium.",
+     "source": "concast"
+    }
+   ]
+  },
+  "cu_c26000_cartridge_brass": {
+   "name": "Yellow (cartridge) brass C26000 70/30",
+   "family": "copper",
+   "fineness": null,
+   "investment": "gypsum",
+   "composition_wt_pct": {
+    "Cu": 70,
+    "Zn": 30
+   },
+   "composition_source": {
+    "source": "concast",
+    "locator": "Cu 68.5-71.5, Zn rem."
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 8.53,
+     "source": "concast",
+     "locator": "C26000"
+    },
+    "solidus_c": {
+     "value": 916,
+     "source": "concast",
+     "locator": "C26000 1680F"
+    },
+    "liquidus_c": {
+     "value": 954,
+     "source": "concast",
+     "locator": "C26000 1750F"
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 566,
+      "max": 593
+     },
+     "thin": {
+      "min": 677,
+      "max": 732
+     },
+     "source": "upm",
+     "locator": "Flask table note: Brass & Bronze use the same temperatures as 10/14/18K white gold; Vacuum Cast Heavy/Light",
+     "method": "vacuum",
+     "alt": [
+      {
+       "heavy": {
+        "min": 482,
+        "max": 482
+       },
+       "thin": {
+        "min": 538,
+        "max": 566
+       },
+       "source": "upm",
+       "locator": "same, Centrifugal Cast",
+       "method": "centrifugal"
+      }
+     ]
+    },
+    "thermal_conductivity_w_mk": {
+     "value": 121.2,
+     "source": "concast",
+     "locator": "C26000"
+    },
+    "specific_heat_j_kgk": {
+     "value": 377.1,
+     "source": "concast",
+     "locator": "C26000"
+    }
+   },
+   "notes": [
+    {
+     "text": "Wrought alloy datasheet (no foundry pour temps). Zn boils at 907 C: zinc fuming and gas porosity.",
+     "source": "wiki_zinc"
+    }
+   ]
+  },
+  "cu_c23000_nugold": {
+   "name": "Red brass / NuGold C23000 85/15",
+   "family": "copper",
+   "fineness": null,
+   "investment": "gypsum",
+   "composition_wt_pct": {
+    "Cu": 85,
+    "Zn": 15
+   },
+   "composition_source": {
+    "source": "concast",
+    "locator": "Cu 84-86, Zn rem."
+   },
+   "properties": {
+    "density_g_cm3": {
+     "value": 8.67,
+     "source": "concast",
+     "locator": "C23000"
+    },
+    "solidus_c": {
+     "value": 966,
+     "source": "concast",
+     "locator": "C23000 1770F"
+    },
+    "liquidus_c": {
+     "value": 999,
+     "source": "concast",
+     "locator": "C23000 1830F"
+    },
+    "flask_c": {
+     "heavy": {
+      "min": 566,
+      "max": 593
+     },
+     "thin": {
+      "min": 677,
+      "max": 732
+     },
+     "source": "upm",
+     "locator": "Flask table note: Brass & Bronze use the same temperatures as 10/14/18K white gold; Vacuum Cast Heavy/Light",
+     "method": "vacuum",
+     "alt": [
+      {
+       "heavy": {
+        "min": 482,
+        "max": 482
+       },
+       "thin": {
+        "min": 538,
+        "max": 566
+       },
+       "source": "upm",
+       "locator": "same, Centrifugal Cast",
+       "method": "centrifugal"
+      }
+     ]
+    },
+    "thermal_conductivity_w_mk": {
+     "value": 140.3,
+     "source": "concast",
+     "locator": "C23000"
+    },
+    "specific_heat_j_kgk": {
+     "value": 377.1,
+     "source": "concast",
+     "locator": "C23000"
+    }
+   },
+   "notes": [
+    {
+     "text": "Wrought alloy datasheet (no foundry pour temps).",
+     "source": "concast"
+    }
+   ]
+  }
+ },
+ "rules": [
+  {
+   "id": "attach_heaviest",
+   "statement": "Attach the feed sprue at the heaviest/thickest section of the piece.",
+   "source": "stuller_sprue",
+   "locator": "Rule 1 'Always attach at the heaviest part'",
+   "alt": [
+    {
+     "source": "progold_labp",
+     "locator": "p.6 'in the heaviest part of the piece'"
+    },
+    {
+     "source": "hs_jeff",
+     "locator": "attach to the thickest or heaviest part of the ring"
+    },
+    {
+     "source": "stuller_gold",
+     "locator": "'Place sprue (gates) at heaviest cross sections'"
+    }
+   ]
+  },
+  {
+   "id": "feeder_gt_section",
+   "statement": "Feed sprue diameter must exceed the thickness of the section it feeds.",
+   "source": "stuller_sprue",
+   "locator": "Rule 2 'Diameter should be greater than the thickness of the pattern attached'",
+   "value": {
+    "min_ratio": 1.0
+   }
+  },
+  {
+   "id": "feeder_125pct",
+   "statement": "Sprue at least 25% larger than the heaviest portion of the piece; add a sprue for higher karats.",
+   "source": "hs_jeff",
+   "locator": "sprue tip 1",
+   "value": {
+    "min_ratio": 1.25
+   }
+  },
+  {
+   "id": "ingate_area_ratio",
+   "statement": "Ingate cross-section ~1:1 with the section of the piece at the attachment.",
+   "source": "progold_labp",
+   "locator": "p.6",
+   "value": {
+    "area_ratio": 1.0
+   },
+   "alt": [
+    {
+     "value": {
+      "area_ratio_min": 0.7,
+      "area_ratio_max": 1.5
+     },
+     "source": "bell_sprue",
+     "locator": "'cross sectional area of the feed sprue should be between 70 and 150%' of attachment point, depending on authority"
+    },
+    {
+     "value": {
+      "area_ratio_min": 0.667
+     },
+     "source": "yoshida2022",
+     "locator": "gate >= 2/3 of cross-sectional area of the thick wall"
+    }
+   ]
+  },
+  {
+   "id": "no_choke",
+   "statement": "Do not use choke (necked) gates; they cut off feed metal. Flare the gate where it meets the piece.",
+   "source": "stuller_gold",
+   "locator": "'Don't use chock gates'",
+   "alt": [
+    {
+     "source": "stuller_sprue",
+     "locator": "Rule 7 flare the gate"
+    }
+   ]
+  },
+  {
+   "id": "feeder_length",
+   "statement": "Keep feed sprues short: max ~3/4 in (19 mm); if longer, increase diameter.",
+   "source": "hs_jeff",
+   "locator": "'Feeder sprues should not exceed 3/4\"'",
+   "value": {
+    "max_length_mm": 19.05
+   }
+  },
+  {
+   "id": "sprue_angle",
+   "statement": "Attach feed sprues at ~45 deg to the main sprue (smallest pieces top, largest bottom).",
+   "source": "stuller_sprue",
+   "locator": "Rule 4",
+   "value": {
+    "angle_deg": 45
+   },
+   "alt": [
+    {
+     "value": {
+      "angle_deg": 80
+     },
+     "source": "hs_jeff",
+     "locator": "vacuum casting: 'more like a T than a Y, ~80 degrees'"
+    },
+    {
+     "value": {
+      "angle_deg": 90
+     },
+     "source": "progold_labp",
+     "locator": "p.8 ideal runner angle 90"
+    },
+    {
+     "value": {
+      "angle_deg": 90
+     },
+     "source": "klotz2014sfs",
+     "locator": "Pt centrifugal: parts under 90 deg to main sprue give less turbulence"
+    },
+    {
+     "value": {
+      "angle_deg": 90
+     },
+     "source": "maerz2007",
+     "locator": "p.310/316 waxes at almost right angle to sprue (Pt)"
+    }
+   ],
+   "conflict": "45 deg (Stuller) vs 80-90 deg (H&S vacuum, Progold, Pt simulation)"
+  },
+  {
+   "id": "taper",
+   "statement": "Taper sprues ~1.1:1 (straight) and ~1.3:1 (bent) to reduce turbulence.",
+   "source": "bell_sprue",
+   "locator": "'ratio of 1.1:1 for straight sprues and 1.3:1 for bent sprues'",
+   "value": {
+    "straight": 1.1,
+    "bent": 1.3
+   }
+  },
+  {
+   "id": "round_section",
+   "statement": "Use round sprue sections: a round 3 mm tube passed ~45% more fluid than a flattened one, and round sections freeze later.",
+   "source": "bell_sprue",
+   "locator": "fluid test 21 s vs 38 s",
+   "alt": [
+    {
+     "source": "progold_labp",
+     "locator": "p.6 rounded sections for fluid- and thermodynamic reasons"
+    }
+   ]
+  },
+  {
+   "id": "main_sprue_reservoir",
+   "statement": "The central (main) sprue must act as reservoir and be the last part of the tree to solidify; give it adequate volume.",
+   "source": "grimwade2002",
+   "locator": "p.250",
+   "alt": [
+    {
+     "source": "stuller_sprue",
+     "locator": "Rule 5"
+    }
+   ]
+  },
+  {
+   "id": "reservoir_shape",
+   "statement": "Reservoirs/tanks: spherical, with a very short ingate.",
+   "source": "progold_labp",
+   "locator": "p.9"
+  },
+  {
+   "id": "chvorinov",
+   "statement": "Solidification time t = B (V/A)^n, n ~= 2 (Askeland); 1.5-2 (Degarmo). Modulus M = V/A.",
+   "source": "wiki_chvorinov",
+   "locator": "formula section",
+   "value": {
+    "n": 2,
+    "n_range": [
+     1.5,
+     2.0
+    ]
+   },
+   "alt": [
+    {
+     "source": "grimwade2002",
+     "locator": "p.244 t = (1/lambda^2)(V/A)^2"
+    },
+    {
+     "source": "giesslex",
+     "locator": "tE = k M^2, n 1.5-2.0"
+    }
+   ]
+  },
+  {
+   "id": "feeder_time_ratio",
+   "statement": "Feeder (sprue/button) solidification time should exceed the casting's by ~25%.",
+   "source": "wiki_riser",
+   "locator": "'25% longer is usually a safe choice'",
+   "value": {
+    "time_ratio": 1.25
+   },
+   "alt": [
+    {
+     "source": "giesslex",
+     "locator": "risers solidification time e.g. 25% longer than casting"
+    }
+   ]
+  },
+  {
+   "id": "feeder_modulus_ratio",
+   "statement": "Feeder modulus >= ~1.12 x modulus of the section fed (from t-ratio 1.25 with n=2).",
+   "source": "derived",
+   "locator": "",
+   "value": {
+    "modulus_ratio": 1.118
+   },
+   "method": "sqrt(1.25) combining feeder_time_ratio with chvorinov n=2"
+  },
+  {
+   "id": "mould_constant_gypsum",
+   "statement": "No published Chvorinov mould constant B for gypsum-bonded jewellery investment was found; B must be calibrated (e.g., by simulation/experiment).",
+   "source": "heiss2015",
+   "locator": "investment thermal conductivity could not be determined from literature; measured and used to calibrate simulation"
+  },
+  {
+   "id": "hot_spot_junction",
+   "statement": "A hot spot forms where heavy sprues join the ring; a ring shank can act as feeder for a thick section and leave centreline pores - feed thick sections directly.",
+   "source": "heiss2015",
+   "locator": "simulation results (Pt ring)",
+   "alt": [
+    {
+     "source": "klotz2014sfs",
+     "locator": "hot spot at sprue-ring junction"
+    }
+   ]
+  },
+  {
+   "id": "main_sprue_tilt",
+   "statement": "In tilt casting (Pt) reducing main sprue diameter from 10 to 5 mm increased filling speed and saved ~50% tree weight.",
+   "source": "klotz2014sfs",
+   "locator": "sprue design conclusions",
+   "value": {
+    "from_mm": 10,
+    "to_mm": 5
+   }
+  },
+  {
+   "id": "no_uphill_feeding",
+   "statement": "No feeding uphill in thicker sections (adverse pressure gradient, convection).",
+   "source": "campbell10",
+   "locator": "Rule 6"
+  },
+  {
+   "id": "meniscus_velocity",
+   "statement": "Keep liquid metal meniscus velocity below ~0.5 m/s to avoid surface-film entrainment.",
+   "source": "campbell10",
+   "locator": "Rule 2",
+   "value": {
+    "max_m_s": 0.5
+   }
+  },
+  {
+   "id": "spacing",
+   "statement": "Leave ~10 mm between pieces on the tree and 10-15 mm at the sprue extremity.",
+   "source": "progold_labp",
+   "locator": "p.10",
+   "value": {
+    "between_pieces_mm": 10,
+    "end_mm": [
+     10,
+     15
+    ]
+   }
+  },
+  {
+   "id": "flask_clearance_pt",
+   "statement": "Keep >=7 mm investment between wax and flask wall (Pt).",
+   "source": "rio_pt",
+   "locator": "sprue guidelines",
+   "value": {
+    "min_mm": 7
+   }
+  },
+  {
+   "id": "pt_sprues",
+   "statement": "Platinum: short, thicker sprues than for gold/silver, oriented to the centrifugal force direction.",
+   "source": "rio_pt",
+   "locator": "sprue guidelines"
+  },
+  {
+   "id": "superheat_by_size",
+   "statement": "Superheat above liquidus / flask temperature by piece size: large +30C/482C, medium +60C/538C, small/intricate +100C/593C.",
+   "source": "umicore2021",
+   "locator": "'Metal & Flask Temperatures' page",
+   "value": {
+    "large": [
+     30,
+     482
+    ],
+    "medium": [
+     60,
+     538
+    ],
+    "small": [
+     100,
+     593
+    ]
+   }
+  },
+  {
+   "id": "superheat_by_method",
+   "statement": "Karat gold: vacuum-assist pour 100-200F (56-111C) over melt temperature; centrifugal 50-125F (28-69C) over.",
+   "source": "stuller_gold",
+   "locator": "casting temperature section",
+   "value": {
+    "vacuum_c": [
+     56,
+     111
+    ],
+    "centrifugal_c": [
+     28,
+     69
+    ]
+   }
+  },
+  {
+   "id": "flask_gypsum_generic",
+   "statement": "Gypsum investment (Satin Cast 20) flask: filigree/ladies rings 482-538C; heavy gents rings 371-482C; max burnout 732C.",
+   "source": "kerr_sc20",
+   "locator": "DFU casting temperatures",
+   "value": {
+    "thin": [
+     482,
+     538
+    ],
+    "heavy": [
+     371,
+     482
+    ],
+    "max_burnout": 732
+   }
+  },
+  {
+   "id": "vol_shrinkage_generic",
+   "statement": "Volume shrinkage on solidification of most metals: 3-7%; most Ag and Au alloys 5-6%.",
+   "source": "grimwade2002",
+   "locator": "p.249",
+   "value": {
+    "min": 3,
+    "max": 7
+   },
+   "alt": [
+    {
+     "value": {
+      "min": 5,
+      "max": 6
+     },
+     "source": "bell_sprue",
+     "locator": "liquid/solid volume difference"
+    }
+   ]
+  },
+  {
+   "id": "gypsum_breakdown",
+   "statement": "CaSO4 in gypsum-bonded investment decomposes to CaO + SO2 between ~900 and 1260C; melt/investment reaction is a primary cause of gas porosity. Use phosphate/silica Pt investments for Pt, Pd and high-melting alloys.",
+   "source": "phet2017",
+   "locator": "abstract",
+   "value": {
+    "min_c": 900,
+    "max_c": 1260
+   },
+   "alt": [
+    {
+     "source": "ott1985",
+     "locator": "CaSO4-bonded investment reactions as gas porosity source"
+    },
+    {
+     "source": "rio_pt",
+     "locator": "phosphate-bonded investment recommended"
+    }
+   ]
+  }
+ ]
+}

@@ -3,8 +3,9 @@ import json
 import pytest
 import rings
 
-from spruegen import features, policy
-from spruegen.cli import run_propose
+from spruegen.detect import features
+from spruegen.plan import policy
+from spruegen.pipeline import run_propose
 from spruegen.schemas import Job, PolicyError, Profile, Stem
 
 

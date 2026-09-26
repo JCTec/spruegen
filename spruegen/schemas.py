@@ -8,26 +8,14 @@ from typing import Any, Literal
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
+from spruegen.errors import FeatureError, InputError, PolicyError, SpruegenError  # noqa: F401  (re-export)
+
 DEFAULT_LOCKS = ["stem_d_mm", "stem_h_mm", "attach_mode", "keepout"]
 KEEPOUTS = {"finger_hole", "outer_surface", "lattice_thin"}
 
 Vec3 = list[float]
 
 
-class SpruegenError(Exception):
-    """Error accionable; el CLI lo imprime tal cual."""
-
-
-class InputError(SpruegenError):
-    pass
-
-
-class FeatureError(SpruegenError):
-    pass
-
-
-class PolicyError(SpruegenError):
-    pass
 
 
 class TreeConfig(BaseModel):
@@ -72,7 +60,8 @@ class VentConfig(BaseModel):
 class Profile(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
-    metal: str = "Ag925"
+    metal: str = "Ag925"  # etiqueta legible; los datos metalúrgicos vienen de `alloy`
+    alloy: str | None = None  # id en spruegen/materials/data/alloys.json (fuente única de propiedades)
     process: str = "vacuum"
     units: Literal["mm"] = "mm"
     stem_d_mm: float = Field(10.0, gt=0)
@@ -253,6 +242,7 @@ class Proposal(BaseModel):
     hub: Hub | None = None
     tree: dict[str, Any] = Field(default_factory=dict)  # modo pedido/usado + razón
     analysis: dict[str, Any] | None = None  # resumen de `analyze`
+    casting: dict[str, Any] | None = None  # hoja de colada: masa, temperaturas, reglas (spruegen.materials)
     ring_job: dict[str, Any]  # bbox, volumen, z span, r_inner en frame del job
     previews: dict[str, str]
     locks: dict[str, Any]  # effective, values
@@ -281,14 +271,44 @@ class Proposal(BaseModel):
         return self.feeders[0]
 
 
+def _deep_merge(base: dict, over: dict) -> dict:
+    out = dict(base)
+    for k, v in over.items():
+        out[k] = _deep_merge(out[k], v) if isinstance(v, dict) and isinstance(out.get(k), dict) else v
+    return out
+
+
+def read_profile_data(path: str | Path, _seen: tuple = ()) -> dict:
+    """JSON del profile con herencia: `"extends": "ag925"` (preset o ruta) + solo las diferencias."""
+    path = Path(path)
+    if path.resolve() in _seen:
+        raise InputError(f"herencia circular de profiles: {path}")
+    try:
+        data = json.loads(path.read_text())
+    except FileNotFoundError:
+        raise InputError(f"no existe el profile: {path}")
+    except json.JSONDecodeError as e:
+        raise InputError(f"profile inválido ({path}): {e}")
+    base_ref = data.pop("extends", None)
+    if base_ref is None:
+        return data
+    local = path.parent / f"{base_ref}.json"
+    if local.exists() and local.resolve() != path.resolve():
+        base_path = local
+    else:
+        from spruegen.config import presets  # lazy: presets importa schemas
+
+        base_path = presets.resolve(base_ref)
+    return _deep_merge(read_profile_data(base_path, _seen + (path.resolve(),)), data)
+
+
 def load_profile(path: str | Path | None) -> Profile:
     if path is None:
         return Profile()
+    data = read_profile_data(path)
     try:
-        return Profile.model_validate(json.loads(Path(path).read_text()))
-    except FileNotFoundError:
-        raise InputError(f"no existe el profile: {path}")
-    except (json.JSONDecodeError, ValueError) as e:
+        return Profile.model_validate(data)
+    except ValueError as e:
         raise InputError(f"profile inválido ({path}): {e}")
 
 

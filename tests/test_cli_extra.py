@@ -4,8 +4,9 @@ import pytest
 import rings
 from typer.testing import CliRunner
 
-from spruegen import presets
-from spruegen.cli import app, run_batch
+from spruegen.config import presets
+from spruegen.cli import app
+from spruegen.pipeline import run_batch
 
 runner = CliRunner()
 
@@ -73,7 +74,7 @@ def test_bad_tree_flag():
 
 @pytest.mark.slow
 def test_demo_gallery(tmp_path):
-    from spruegen import showcase
+    from spruegen.report import showcase
 
     ok = showcase.run_demo(tmp_path, echo=lambda *_: None)
     assert ok

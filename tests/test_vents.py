@@ -3,8 +3,8 @@ import math
 import pytest
 import rings
 
-from spruegen.cli import run_apply, run_propose
-from spruegen.features import angdist
+from spruegen.pipeline import run_apply, run_propose
+from spruegen.detect.features import angdist
 
 
 @pytest.fixture(scope="module")

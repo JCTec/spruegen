@@ -1,0 +1,6 @@
+{
+  "extends": "au14k",
+  "metal": "Au18k",
+  "alloy": "au18y",
+  "notes": "Oro 18k amarillo. Valores de partida; calíbralos con `spruegen log` según tus coladas."
+}

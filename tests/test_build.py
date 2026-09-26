@@ -7,10 +7,12 @@ import pytest
 import trimesh
 from typer.testing import CliRunner
 
-from spruegen import build, io
-from spruegen.cli import app, run_apply, run_propose
+from spruegen.construct import sprues as build
+from spruegen.mesh import io
+from spruegen.cli import app
+from spruegen.pipeline import run_apply, run_propose
 from spruegen.schemas import load_proposal
-from spruegen.validate import load_ring_job, validate
+from spruegen.construct.validate import load_ring_job, validate
 
 INPUT = Path(__file__).resolve().parents[2] / "input.stl"
 runner = CliRunner()

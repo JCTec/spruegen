@@ -4,8 +4,17 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "spruegen"
-version = "0.2.0"
-description = "CLI: feeder interno + downstem (Ø10 x 35 mm) para un anillo STL, listo para resina casteable"
+version = "0.3.0"
+description = "Deterministic sprue-tree generator for lost-wax ring casting, backed by a cited alloy database"
+license = {file = "LICENSE"}
+authors = [{name = "Juan Carlos Estévez Rodríguez"}]
+keywords = ["jewelry", "casting", "lost-wax", "sprue", "stl", "metallurgy"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: Other/Proprietary License",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Multimedia :: Graphics :: 3D Modeling",
+]
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
@@ -21,20 +30,29 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=7", "httpx>=0.27"]
+dev = ["pytest>=7", "httpx>=0.27", "ruff>=0.5"]
 render = ["matplotlib>=3.7", "fast_simplification>=0.1"]
 gui = ["fastapi>=0.110", "uvicorn>=0.29", "python-multipart>=0.0.9", "matplotlib>=3.7", "fast_simplification>=0.1"]
 
 [project.scripts]
 spruegen = "spruegen.cli:app"
 
-[tool.setuptools]
-packages = ["spruegen", "spruegen.gui"]
+[project.urls]
+Homepage = "https://github.com/JCTec/spruegen"
+
+[tool.setuptools.packages.find]
+include = ["spruegen*"]
 
 [tool.setuptools.package-data]
-spruegen = ["presets/*.json", "gui/static/*", "gui/static/vendor/*"]
+"spruegen.config" = ["presets/*.json"]
+"spruegen.materials" = ["data/*.json", "data/*.md"]
+"spruegen.gui" = ["static/*", "static/vendor/*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 markers = ["slow: tests largos (showcase)"]
 filterwarnings = ["ignore::RuntimeWarning:trimesh.triangles", "ignore::DeprecationWarning:fastapi.testclient"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"

@@ -55,6 +55,13 @@ _RULES: list[tuple[str, object]] = [
     (r"no se pudo poner varilla cerca de theta=(-?\d+)° .*",
      "couldn't place a vent near {1}° (thin edge or too close to a feeder)"),
     (r"varillas recortadas: no caben en ring_space_mm", "some vents removed: they don't fit in the flask space"),
+    # --- casting sheet (spruegen.materials)
+    (r"feeder #(\d+) Ø([\d.]+) mm < espesor ([\d.]+) mm que alimenta \(ratio ([\d.]+) < ([\d.]+)\)",
+     "feeder #{1} Ø{2} mm is thinner than the {3} mm section it feeds (ratio {4} < {5})"),
+    (r"(.+): requiere revestimiento aglomerado con fosfato \(no yeso\)",
+     "{1}: needs phosphate-bonded investment (not gypsum)"),
+    (r"colada hasta (\d+) °C: el yeso se descompone .*",
+     "pour up to {1} °C: gypsum investment breaks down (SO₂) above ~1200 °C; consider phosphate investment"),
     (r"tronco de la Y limitado a Ø([\d.]+) mm .*", "Y trunk limited to Ø{1} mm (less area than its arms)"),
     (r"tronco Ø([\d.]+) mm con menos área que sus brazos.*", "trunk Ø{1} mm has less area than its arms"),
     (r"feeders directos con largos dispares \(([\d.]+)–([\d.]+) mm\)", "feeder lengths differ ({1}–{2} mm)"),

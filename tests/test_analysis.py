@@ -4,8 +4,10 @@ import numpy as np
 import pytest
 import rings
 
-from spruegen import analysis, features, voxel
-from spruegen.features import angdist
+from spruegen.plan import analysis
+from spruegen.detect import features
+from spruegen.detect import voxel
+from spruegen.detect.features import angdist
 from spruegen.schemas import Profile
 
 P = Profile()

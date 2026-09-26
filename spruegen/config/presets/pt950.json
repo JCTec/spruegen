@@ -1,0 +1,14 @@
+{
+  "extends": "ag925",
+  "metal": "Pt950",
+  "alloy": "pt950ru",
+  "process": "centrifugal",
+  "feeder_d_factor": 1.4,
+  "feeder_d_min_mm": 2.8,
+  "feeder_d_max_mm": 4.0,
+  "tree": {
+    "feed_reach_mm": 30.0,
+    "feeder_capacity_mm3": 700.0
+  },
+  "notes": "Platino 950/Ru: revestimiento de fosfato, sprues cortos y gruesos (Rio Grande); alcance/capacidad SIN calibrar: valores conservadores. Valores de partida; calíbralos con `spruegen log` según tus coladas."
+}

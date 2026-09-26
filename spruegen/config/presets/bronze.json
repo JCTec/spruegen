@@ -1,0 +1,16 @@
+{
+  "extends": "ag925",
+  "metal": "Bronze",
+  "alloy": "cu_c87600_si_bronze",
+  "feeder_d_factor": 1.4,
+  "feeder_d_min_mm": 2.8,
+  "feeder_d_max_mm": 4.0,
+  "tree": {
+    "feed_reach_mm": 32.0,
+    "feeder_capacity_mm3": 700.0
+  },
+  "vents": {
+    "mode": "auto"
+  },
+  "notes": "Bronce al silicio (C87600): menos fluido, feeders más gruesos, más feeders y varillas de venteo. Valores de partida; calíbralos con `spruegen log` según tus coladas."
+}

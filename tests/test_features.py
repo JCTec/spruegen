@@ -5,7 +5,9 @@ import pytest
 import rings
 import trimesh
 
-from spruegen import features, io, repair
+from spruegen.detect import features
+from spruegen.mesh import io
+from spruegen.mesh import repair
 from spruegen.schemas import FeatureError, InputError, Profile
 
 

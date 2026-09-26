@@ -1,0 +1,6 @@
+{
+  "extends": "au14k",
+  "metal": "Au18k-Pd",
+  "alloy": "au18w_pd",
+  "notes": "Oro blanco 18k al paladio (sin níquel): liquidus depende mucho del %Pd; usa la ficha de tu aleación. Valores de partida; calíbralos con `spruegen log` según tus coladas."
+}

@@ -26,7 +26,7 @@ def torus_stl(tmp_path_factory):
 @pytest.fixture(scope="session")
 def torus_run(tmp_path_factory, torus_stl):
     """propose + apply del torus una sola vez para varios tests."""
-    from spruegen.cli import run_apply, run_propose
+    from spruegen.pipeline import run_apply, run_propose
 
     wd = tmp_path_factory.mktemp("work")
     prop = run_propose(torus_stl, PROFILE, None, wd)

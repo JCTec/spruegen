@@ -1,0 +1,9 @@
+{
+  "extends": "ag925",
+  "process": "centrifugal",
+  "tree": {
+    "feed_reach_mm": 45.0,
+    "feeder_capacity_mm3": 1100.0
+  },
+  "notes": "Plata 925 centrífuga: el metal llega con más presión, alcance mayor. Valores de partida; calíbralos con `spruegen log` según tus coladas."
+}

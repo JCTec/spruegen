@@ -4,7 +4,7 @@ import numpy as np
 import pytest
 import rings
 
-from spruegen.cli import run_apply, run_propose
+from spruegen.pipeline import run_apply, run_propose
 
 
 @pytest.fixture(scope="module")

@@ -1,0 +1,6 @@
+{
+  "extends": "bronze",
+  "metal": "Brass",
+  "alloy": "cu_c85700_yellow_brass",
+  "notes": "Latón (C85700): similar al bronce; ventea bien (el zinc gasifica). Valores de partida; calíbralos con `spruegen log` según tus coladas."
+}
