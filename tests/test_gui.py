@@ -73,6 +73,20 @@ def test_spider_and_advanced(client):
     assert bad.status_code == 400 and "error" in bad.json()
 
 
+def test_stem_settings(client):
+    p = next(p for p in client.get("/api/presets").json() if p["name"] == "ag925")
+    assert p["stem_kind"] == "downstem" and p["stub"] == {"d_mm": 6.0, "h_mm": 5.0}
+    sid = _upload(client, rings.torus_ring()).json()["sid"]
+    cfg = {"preset": "ag925", "tree_mode": "spider", "feeders": 3, "vents": "off", "advanced": {},
+           "stem": {"kind": "stub", "d_mm": 6, "h_mm": 5}}
+    gj = client.post(f"/api/{sid}/generate", json=cfg).json()
+    assert gj["ok"] and all(c["ok"] for c in gj["validation"]["checks"]), gj["validation"]
+    assert gj["stem"] == {"d_mm": 6.0, "h_mm": 5.0, "kind": "stub"}
+    assert any(c["label"].startswith("Stub Ø6") for c in gj["validation"]["checks"])
+    bad = client.post(f"/api/{sid}/generate", json={**cfg, "stem": {"kind": "stub", "d_mm": 1, "h_mm": 5}})
+    assert bad.status_code == 400 and "narrower than a feeder" in bad.json()["error"]
+
+
 def test_inch_file_rejected_in_english(client):
     m = rings.torus_ring()
     m.apply_scale(1 / 25.4)

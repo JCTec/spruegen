@@ -47,6 +47,13 @@ def apply_overrides(profile: Profile, job: Job) -> tuple[Profile, list[str]]:
     return Profile.model_validate(data), [f"override explícito: {k}={v}" for k, v in job.overrides.items()]
 
 
+def resolve_stem(profile: Profile) -> Profile:
+    """Sin downstem, el stub hace de stem: mismo ruteo y mismas validaciones, solo más chico."""
+    if profile.stem_kind != "stub":
+        return profile
+    return profile.model_copy(update={"stem_d_mm": profile.stub_d_mm, "stem_h_mm": profile.stub_h_mm})
+
+
 def lock_values(profile: Profile, locks: list[str]) -> dict:
     return {k: getattr(profile, k) for k in locks if k in LOCKABLE}
 

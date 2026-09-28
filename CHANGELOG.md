@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.4.0 — 2026-09-27
+
+### License
+- The code is now MIT (was PolyForm Noncommercial 1.0.0) and the alloy dataset is CC BY 4.0 (was CC BY-NC-SA 4.0). Commercial use is allowed.
+- Installable with Homebrew: `brew install jctec/spruegen/spruegen`.
+
+### Stem
+- The downstem is editable: `--stem 12x40` on `propose`/`batch`, or the Ø and length fields in the app. The chosen size is what locks and validation check; the fixed "standard Ø10 × 35" warning is gone.
+- The downstem is optional: `--stem off` (or *Stub only* in the app) ends the feeders in a short stub (`stub_d_mm` × `stub_h_mm`, Ø6 × 5 by default) to wax onto your own tree. It's planned as a small stem, so routing and every check still apply.
+- New profile keys `stem_kind`, `stub_d_mm`, `stub_h_mm`; `stem_kind` is locked by default, so `job.json` can't switch it.
+
+### App
+- Disabled fields now look disabled, and static files are revalidated on every load so edits show up after a refresh.
+
 ## 0.3.0 — 2026-09-26
 
 ### Architecture

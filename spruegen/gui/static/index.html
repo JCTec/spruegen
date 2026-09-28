@@ -57,7 +57,16 @@
           <button type="button" data-v="4">4</button>
         </div>
       </div>
-      <p class="locked">Stem <b id="stem-dims">Ø10 × 35 mm</b> <span class="tag">locked</span></p>
+      <div class="field">Stem <span class="hint inline">validation checks the size you set</span>
+        <div class="seg" role="radiogroup" id="stem">
+          <button type="button" data-v="downstem" class="on" title="Straight stem that fits your rubber sprue base">Downstem</button>
+          <button type="button" data-v="stub" title="No downstem: feeders end in a short stub you wax onto your own tree">Stub only</button>
+        </div>
+      </div>
+      <div class="stem-dims">
+        <label class="field row">Ø (mm)<input type="number" id="stem-d" min="1" step="0.5"></label>
+        <label class="field row">Length (mm)<input type="number" id="stem-h" min="1" step="1"></label>
+      </div>
 
       <details id="advanced">
         <summary>Advanced</summary>

@@ -346,10 +346,10 @@ def route(
                 feeders[i] = make_feeder(A, B, Rf[i], pens[i], rs[i], p, "branch")
 
     hub = None
-    if p.tree.hub == "cone":
+    if p.tree.hub == "cone" and p.stem_kind == "downstem":
         hub = Hub(z0=p.stem_h_mm - p.boolean_overlap_mm, z1=p.stem_h_mm + 1.5, r0=stem_r, r1=0.62 * stem_r)
 
-    stem = Stem(d_mm=p.stem_d_mm, h_mm=p.stem_h_mm, origin=[0.0, 0.0, 0.0], axis=[0.0, 0.0, 1.0])
+    stem = Stem(d_mm=p.stem_d_mm, h_mm=p.stem_h_mm, kind=p.stem_kind, origin=[0.0, 0.0, 0.0], axis=[0.0, 0.0, 1.0])
     ring_job = ring_in.copy()
     ring_job.apply_transform(T)
     check_placement(ring_job, p, warnings)

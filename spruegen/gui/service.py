@@ -9,6 +9,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 import numpy as np
+from pydantic import ValidationError
 
 from spruegen.plan import analysis
 from spruegen import pipeline
@@ -51,6 +52,8 @@ def preset_list() -> list[dict]:
             "notes": p.notes or "",
             "advanced": advanced_of(p),
             "stem": {"d_mm": p.stem_d_mm, "h_mm": p.stem_h_mm},
+            "stub": {"d_mm": p.stub_d_mm, "h_mm": p.stub_h_mm},
+            "stem_kind": p.stem_kind,
         })
     return out
 
@@ -66,7 +69,10 @@ def advanced_of(p: Profile) -> dict:
 
 
 def build_profile(config: dict, sdir: Path) -> Path:
-    """Preset + advanced edits -> <session>/profile.json (stem/locks untouched)."""
+    """Preset + advanced + stem edits -> <session>/profile.json.
+
+    The stem the user picks here is a deliberate choice: it becomes the size that locks and validation check.
+    """
     try:
         prof = presets.load(config.get("preset") or "ag925")
     except SpruegenError as e:
@@ -79,10 +85,24 @@ def build_profile(config: dict, sdir: Path) -> Path:
             data[k] = float(v)
         elif k in ADV_TREE:
             data["tree"][k] = float(v)
+    stem = config.get("stem") or {}
+    if stem:
+        kind = stem.get("kind") or "downstem"
+        if kind not in ("downstem", "stub"):
+            raise GuiError(f"Unknown stem option: {kind}")
+        data["stem_kind"] = kind
+        prefix = "stub" if kind == "stub" else "stem"
+        for dim in ("d_mm", "h_mm"):
+            if stem.get(dim) not in (None, ""):
+                try:
+                    data[f"{prefix}_{dim}"] = float(stem[dim])
+                except (TypeError, ValueError):
+                    raise GuiError(f"Invalid stem setting: {dim}={stem[dim]!r}")
     try:
         prof = Profile.model_validate(data)
-    except ValueError as e:
-        raise GuiError(f"Invalid advanced setting: {e}")
+    except ValidationError as e:
+        msgs = "; ".join(translate(err["msg"].removeprefix("Value error, ")) for err in e.errors())
+        raise GuiError(f"Invalid setting: {msgs}")
     path = sdir / "profile.json"
     path.write_text(prof.model_dump_json(indent=2))
     return path
@@ -185,6 +205,8 @@ def checklist(rep: dict, prop) -> list[dict]:
     p = prop.profile
     errs = " ".join(rep.get("errors", []))
     d, h = st.get("d_mm"), st.get("h_mm")
+    name = "Stub" if prop.stem.kind == "stub" else "Stem"
+    stem_bad = any(e.startswith((f"{name.lower()} mide", "no se pudo medir")) for e in rep.get("errors", []))
     outer = m.get("outer_surface_max_diff_mm")
     hole = m.get("hole_blocked_frac")
     piece = m.get("piece_height_mm")
@@ -192,8 +214,8 @@ def checklist(rep: dict, prop) -> list[dict]:
         {"label": "Watertight (closed, printable surface)", "ok": bool(m.get("watertight")), "detail": ""},
         {"label": "One piece (every sprue attached)", "ok": m.get("bodies") == 1,
          "detail": f"{m.get('bodies', '?')} piece(s)"},
-        {"label": f"Stem Ø{p.stem_d_mm:g} × {p.stem_h_mm:g} mm",
-         "ok": bool(st.get("ok")) and abs(d - p.stem_d_mm) <= p.stem_d_tol_mm and abs(h - p.stem_h_mm) <= p.stem_h_tol_mm,
+        {"label": f"{name} Ø{prop.stem.d_mm:g} × {prop.stem.h_mm:g} mm",
+         "ok": bool(st.get("ok")) and not stem_bad,
          "detail": f"measured Ø{d:.2f} × {h:.2f} mm" if st.get("ok") else "not measured"},
         {"label": "Outer surface untouched", "ok": outer is not None and outer <= 0.05,
          "detail": f"max change {outer:.4f} mm" if outer is not None else ""},
@@ -202,8 +224,9 @@ def checklist(rep: dict, prop) -> list[dict]:
         {"label": "Feeders attach from the inside", "ok": "attach más cerca" not in errs and "no hay shank" not in errs,
          "detail": f"{len(prop.feeders)} feeder(s)"},
         {"label": "Fits the flask space", "ok": piece is not None and piece <= p.ring_space_mm,
-         "detail": f"{piece:.1f} of {p.ring_space_mm:g} mm above the stem" if piece is not None else ""},
-        {"label": "Locked settings respected", "ok": "locks violados" not in errs, "detail": "stem Ø/height, inner attach"},
+         "detail": f"{piece:.1f} of {p.ring_space_mm:g} mm above the {name.lower()}" if piece is not None else ""},
+        {"label": "Locked settings respected", "ok": "locks violados" not in errs,
+         "detail": f"{name.lower()} Ø/height as chosen, inner attach"},
     ]
 
 
@@ -239,7 +262,7 @@ def generate(sess: Session, config: dict) -> dict:
         ],
         "branches": [{"d_mm": b.d_mm, "arms": [i + 1 for i in b.arms]} for b in prop.branches],
         "vents": [{"d_mm": v.d_mm, "len_mm": float(np.linalg.norm(np.subtract(v.top, v.base)))} for v in prop.vents],
-        "stem": {"d_mm": prop.stem.d_mm, "h_mm": prop.stem.h_mm},
+        "stem": {"d_mm": prop.stem.d_mm, "h_mm": prop.stem.h_mm, "kind": prop.stem.kind},
         "reasons": translate_all(prop.tree.get("reasons", [])),
         "warnings": translate_all(prop.warnings) + translate_all(rep.get("warnings", [])),
         "validation": {"ok": bool(rep["ok"]), "checks": checklist(rep, prop), "errors": translate_all(rep["errors"])},

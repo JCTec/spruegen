@@ -10,7 +10,7 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator, model_valida
 
 from spruegen.errors import FeatureError, InputError, PolicyError, SpruegenError  # noqa: F401  (re-export)
 
-DEFAULT_LOCKS = ["stem_d_mm", "stem_h_mm", "attach_mode", "keepout"]
+DEFAULT_LOCKS = ["stem_kind", "stem_d_mm", "stem_h_mm", "attach_mode", "keepout"]
 KEEPOUTS = {"finger_hole", "outer_surface", "lattice_thin"}
 
 Vec3 = list[float]
@@ -66,6 +66,10 @@ class Profile(BaseModel):
     units: Literal["mm"] = "mm"
     stem_d_mm: float = Field(10.0, gt=0)
     stem_h_mm: float = Field(35.0, gt=0)
+    # "stub": sin downstem; los feeders terminan en un stub corto para pegarlo a mano al árbol de cera
+    stem_kind: Literal["downstem", "stub"] = "downstem"
+    stub_d_mm: float = Field(6.0, gt=0)
+    stub_h_mm: float = Field(5.0, gt=0)
     ring_space_mm: float = Field(40.0, gt=0)
     button_d_mm: float = Field(40.0, gt=0)
     feeder_len_mm: tuple[float, float] = (8.0, 12.0)
@@ -105,6 +109,11 @@ class Profile(BaseModel):
             raise ValueError("feeder_angle_deg debe ser [min, max]")
         if self.feeder_d_min_mm > self.feeder_d_max_mm:
             raise ValueError("feeder_d_min_mm > feeder_d_max_mm")
+        stem_d = self.stub_d_mm if self.stem_kind == "stub" else self.stem_d_mm
+        if stem_d < self.feeder_d_min_mm:
+            raise ValueError(
+                f"{self.stem_kind} Ø{stem_d} mm es más angosto que un feeder (feeder_d_min_mm={self.feeder_d_min_mm})"
+            )
         return self
 
 
@@ -114,7 +123,7 @@ class Job(BaseModel):
     stl: str | None = None
     up_axis: Literal["z"] = "z"
     finger_axis_hint: Vec3 | None = None
-    lock: list[str] = Field(default_factory=lambda: ["stem_d_mm", "stem_h_mm", "attach_mode"])
+    lock: list[str] = Field(default_factory=lambda: ["stem_kind", "stem_d_mm", "stem_h_mm", "attach_mode"])
     manual_attach: Vec3 | None = None
     # cambios explícitos al profile para este job; prohibidos sobre claves bloqueadas
     overrides: dict[str, Any] = Field(default_factory=dict)
@@ -171,6 +180,7 @@ class Attach(BaseModel):
 class Stem(BaseModel):
     d_mm: float
     h_mm: float
+    kind: Literal["downstem", "stub"] = "downstem"
     origin: Vec3  # centro de la base
     axis: Vec3
 

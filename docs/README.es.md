@@ -5,7 +5,7 @@
 CLI determinista que toma el STL de **un anillo** y genera su **árbol de colada** para lost-wax / resina casteable:
 
 - **feeders solo por la cara interna** del aro: la cara exterior (lattice, filigrana, grabado) queda intacta, verificado al 0.05 mm;
-- **downstem** Ø **10 mm** × **35 mm** (base en z=0), bloqueado por default;
+- **downstem** Ø **10 mm** × **35 mm** (base en z=0) por default, editable; o **sin downstem**: los feeders terminan en un stub corto (Ø6 × 5) para pegarlo a mano al árbol (`--stem off`). La medida elegida es la que se valida;
 - **cuántos feeders y dónde** lo decide un análisis de alimentación (espesor / módulo térmico, cuellos, alcance, capacidad), o lo fijas tú;
 - **forma de árbol**: directo, *spider* (varios feeders iguales) o *Y* (tronco que se bifurca);
 - **varillas de rebalse/venteo** opcionales donde el metal llega último;
@@ -27,7 +27,7 @@ cd spruegen
 App local en el navegador (en inglés; nada sale de tu computadora):
 
 1. **Load ring**: arrastra el STL. Se ve en 3D con volumen, Ø interno, ancho y espesores.
-2. **Settings**: metal/proceso, árbol (Auto / Single / Spider / Y), cantidad de feeders, varillas (Off / Auto / 1–4). *Advanced*: espesor mínimo, Ø de feeder, alcance, volumen por feeder. El stem queda bloqueado en Ø10 × 35.
+2. **Settings**: metal/proceso, árbol (Auto / Single / Spider / Y), cantidad de feeders, varillas (Off / Auto / 1–4). *Advanced*: espesor mínimo, Ø de feeder, alcance, volumen por feeder. *Stem*: Downstem (Ø y largo editables) o *Stub only*.
 3. **Analyze** (opcional): cuántos feeders sugiere y por qué, mapa del anillo "desenrollado" y zonas de alimentación en 3D.
 4. **Generate**: arma el árbol, lo une y lo valida; capas de colores (anillo, árbol, varillas, unión final) y una lista de chequeos ✓/✗.
 5. **Export**: `<anillo>_sprued.stl` (el archivo para imprimir) o un paquete `.zip` con previews, render y reporte. Solo se habilita si todo pasó y no cambiaste los ajustes después de generar.
@@ -35,6 +35,14 @@ App local en el navegador (en inglés; nada sale de tu computadora):
 Opciones: `spruegen gui --port 9000 --no-browser`. Ctrl+C para cerrar (borra los archivos temporales de la sesión).
 
 ## Instalación
+
+Con [Homebrew](https://brew.sh) (macOS / Linux):
+
+```bash
+brew install jctec/spruegen/spruegen
+```
+
+Desde el código:
 
 ```bash
 cd spruegen
@@ -151,13 +159,13 @@ Claves del profile (todas opcionales salvo las del taller): las de v0.1 (`stem_d
 
 ### Locks y overrides
 
-- Locks efectivos = `profile.lock` (default `stem_d_mm`, `stem_h_mm`, `attach_mode`, `keepout`) ∪ `job.lock`. El auto nunca los cambia.
+- Locks efectivos = `profile.lock` (default `stem_kind`, `stem_d_mm`, `stem_h_mm`, `attach_mode`, `keepout`) ∪ `job.lock`. El auto nunca los cambia. Cambiar el stem es una elección explícita: en el profile, con `--stem off|DxH` o en la GUI; eso fija los valores bloqueados.
 - `job.json` → `overrides` cambia claves **no** bloqueadas para ese job; tocar una bloqueada = exit 2. `tree`/`vents` no están bloqueados (los flags `--tree/--feeders/--vents` los ajustan).
 - `manual_attach: [x, y, z]` en `job.json` fuerza un único feeder en ese punto (proyectado a la cara interna, con keepout).
 
 ## Qué valida `apply` / `validate`
 
-Falla (exit 1) si: no es watertight (STL recargado); **más de un cuerpo** (algo quedó suelto); volumen ≤ anillo; el cilindro de prueba del hueco del dedo (60 % del radio) está bloqueado > 50 %; algún feeder queda más cerca de la cara externa que de la interna; **la cara externa cambió** > 0.05 mm; el stem no mide 10 ± 0.2 × 35 ± 0.5 mm; la pieza (con varillas) excede `ring_space_mm`; locks violados; una varilla fuera de la cara interna.
+Falla (exit 1) si: no es watertight (STL recargado); **más de un cuerpo** (algo quedó suelto); volumen ≤ anillo; el cilindro de prueba del hueco del dedo (60 % del radio) está bloqueado > 50 %; algún feeder queda más cerca de la cara externa que de la interna; **la cara externa cambió** > 0.05 mm; el stem (o stub) no mide lo elegido ± 0.2 mm de Ø y ± 0.5 mm de alto (en un stub se tolera además, hacia arriba, lo que asoman los nudos de los feeders); la pieza (con varillas) excede `ring_space_mm`; locks violados; una varilla fuera de la cara interna.
 
 Avisos: espesor justo en el mínimo, feeder > 12 mm, largos dispares, tronco con menos área que sus brazos, spider asimétrico (el shank solo admite attach seguro en algunas zonas), zonas aisladas, normales reparadas.
 

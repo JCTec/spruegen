@@ -12,7 +12,7 @@ from spruegen.mesh import io
 from spruegen.mesh import repair
 from spruegen.construct.sprues import ring_in_job_frame
 from spruegen.detect.features import ray_hits
-from spruegen.plan.policy import check_locks
+from spruegen.plan.policy import check_locks, resolve_stem
 from spruegen.schemas import InputError, Profile, Proposal
 
 OUTER_TOL_MM = 0.05
@@ -136,6 +136,16 @@ def outer_surface_diff(ring, out, z0, z1, n_theta=90, n_z=9) -> float:
     return float(best.max()) if len(best) else 0.0
 
 
+def _stub_knot_allowance(prop: Proposal | None) -> float:
+    if prop is None or prop.stem.kind != "stub":
+        return 0.0
+    return max((f.r_mm for f in prop.fillets if f.role == "stem_join"), default=0.0)
+
+
+def _height_ok(meas: float, expected: float, tol: float, extra_up: float = 0.0) -> bool:
+    return expected - tol <= meas <= expected + tol + extra_up
+
+
 def validate(
     out: trimesh.Trimesh,
     prop: Proposal | None = None,
@@ -145,24 +155,28 @@ def validate(
     errors: list[str] = []
     warnings: list[str] = []
     metrics: dict = {"volume_mm3": float(out.volume), "watertight": bool(out.is_watertight)}
-    p = prop.profile if prop is not None else (profile or Profile())
+    p = prop.profile if prop is not None else resolve_stem(profile or Profile())
 
     if not out.is_watertight:
         errors.append("la malla final no es watertight")
 
     # --- stem
+    # la medida la eligió el usuario (profile / --stem / GUI): se valida contra esa, sin "estándar"
     d_exp, h_exp = (prop.stem.d_mm, prop.stem.h_mm) if prop else (p.stem_d_mm, p.stem_h_mm)
-    if (d_exp, h_exp) != (10.0, 35.0):
-        warnings.append(f"stem con override explícito: Ø{d_exp} x {h_exp} mm (estándar Ø10 x 35)")
+    name = prop.stem.kind if prop else p.stem_kind
+    name = "stem" if name == "downstem" else name
     st = measure_stem(out, h_exp, d_exp)
     metrics["stem"] = st
+    # en un stub los nudos de los feeders pueden asomar sobre la tapa (con un Ø10 no pesan);
+    # se tolera hacia arriba solo lo que explican los nudos planeados
+    knot_mm = _stub_knot_allowance(prop)
     if not st["ok"]:
-        errors.append(f"no se pudo medir el stem: {st['reason']}")
+        errors.append(f"no se pudo medir el {name}: {st['reason']}")
     else:
         if abs(st["d_mm"] - d_exp) > p.stem_d_tol_mm:
-            errors.append(f"stem mide Ø{st['d_mm']:.2f} mm (esperado {d_exp}±{p.stem_d_tol_mm})")
-        if abs(st["h_mm"] - h_exp) > p.stem_h_tol_mm:
-            errors.append(f"stem mide {st['h_mm']:.2f} mm de alto (esperado {h_exp}±{p.stem_h_tol_mm})")
+            errors.append(f"{name} mide Ø{st['d_mm']:.2f} mm (esperado {d_exp}±{p.stem_d_tol_mm})")
+        if not _height_ok(st["h_mm"], h_exp, p.stem_h_tol_mm, knot_mm):
+            errors.append(f"{name} mide {st['h_mm']:.2f} mm de alto (esperado {h_exp}±{p.stem_h_tol_mm})")
 
     if prop is None:
         warnings.append("sin --proposal solo se validan watertight y stem")
@@ -252,7 +266,7 @@ def validate(
         for k, meas in (("stem_d_mm", st["d_mm"]), ("stem_h_mm", st["h_mm"])):
             lv = prop.locks.get("values", {}).get(k)
             tol = p.stem_d_tol_mm if k == "stem_d_mm" else p.stem_h_tol_mm
-            if lv is not None and abs(meas - lv) > tol:
+            if lv is not None and not _height_ok(meas, lv, tol, knot_mm if k == "stem_h_mm" else 0.0):
                 bad.append(f"{k}: bloqueado={lv}, medido={meas:.2f}")
     if bad or not prop.locks_honored:
         errors.append("locks violados: " + ("; ".join(bad) if bad else "locks_honored=false"))

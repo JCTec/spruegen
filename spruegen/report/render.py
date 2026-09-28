@@ -167,8 +167,9 @@ def card_html(prop: Proposal, images: list[str], report: dict | None, out_html: 
         ("Metal / proceso", f"{prop.profile.metal} / {prop.profile.process}"),
         ("Árbol", f"{prop.tree.get('used', 'single')} — {len(prop.feeders)} feeder(s), {len(prop.vents)} varilla(s)"),
         ("Feeders", ", ".join(f"Ø{f.d_mm:.2f}×{f.len_mm:.1f} mm @{f.angle_deg:.0f}°" for f in prop.feeders)),
-        ("Stem", f"Ø{prop.stem.d_mm} × {prop.stem.h_mm} mm"),
-        ("Pieza sobre el stem", f"{prop.ring_job['piece_height_mm']:.1f} / {prop.profile.ring_space_mm:g} mm"),
+        (prop.stem.kind.capitalize(), f"Ø{prop.stem.d_mm} × {prop.stem.h_mm} mm"),
+        (f"Pieza sobre el {'stub' if prop.stem.kind == 'stub' else 'stem'}",
+         f"{prop.ring_job['piece_height_mm']:.1f} / {prop.profile.ring_space_mm:g} mm"),
     ]
     if prop.branches:
         rows.append(("Troncos (Y)", ", ".join(f"Ø{b.d_mm:.2f} mm" for b in prop.branches)))

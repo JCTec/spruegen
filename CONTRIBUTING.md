@@ -37,7 +37,7 @@ Then open an issue with the *cast report* template and attach `casts.jsonl` plus
 
 ## License of contributions
 
-By contributing you agree that your code is licensed under the project's [PolyForm Noncommercial 1.0.0](LICENSE) license and your data under [CC BY-NC-SA 4.0](spruegen/materials/data/LICENSE.md). You also allow the maintainer to offer the project under additional licenses, such as a commercial license, in the future.
+By contributing you agree that your code is licensed under the project's [MIT](LICENSE) license and your data under [CC BY 4.0](spruegen/materials/data/LICENSE.md).
 
 ## Conduct
 

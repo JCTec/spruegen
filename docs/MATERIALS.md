@@ -74,4 +74,4 @@ spruegen materials check my_alloys.json    # validate a custom file
 
 ## License of the data
 
-The dataset (`alloys.json`, `PROVENANCE.md`) is a compilation of published facts with citations. It is licensed **CC BY-NC-SA 4.0** (see [`spruegen/materials/data/LICENSE.md`](../spruegen/materials/data/LICENSE.md)). If you reuse it, cite this project and keep the per-value source citations.
+The dataset (`alloys.json`, `PROVENANCE.md`) is a compilation of published facts with citations. It is licensed **CC BY 4.0** (see [`spruegen/materials/data/LICENSE.md`](../spruegen/materials/data/LICENSE.md)). If you reuse it, cite this project and keep the per-value source citations.

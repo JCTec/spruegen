@@ -50,6 +50,30 @@ def load_ring(path: str | Path):
     return mesh, rep
 
 
+def apply_stem_cli(prof: Profile, stem_opt: str | None) -> Profile:
+    """--stem: 'off' = stub en vez de downstem; 'DxH' (p. ej. 12x40) = downstem de otra medida.
+
+    Es una elección explícita del usuario, así que cambia el profile base (y con él los valores bloqueados).
+    """
+    if stem_opt is None:
+        return prof
+    so = str(stem_opt).strip().lower().replace("×", "x")
+    if so in ("off", "no", "none", "stub"):
+        upd = {"stem_kind": "stub"}
+    else:
+        try:
+            d, h = (float(x) for x in so.split("x"))
+        except ValueError:
+            raise InputError(f"--stem inválido: {stem_opt!r} (usa 'off' o DxH, p. ej. 10x35)")
+        upd = {"stem_kind": "downstem", "stem_d_mm": d, "stem_h_mm": h}
+    data = prof.model_dump()
+    data.update(upd)
+    try:
+        return Profile.model_validate(data)
+    except ValueError as e:
+        raise InputError(f"--stem inválido: {e}")
+
+
 def apply_cli(prof: Profile, tree_mode=None, feeders=None, vents_opt=None) -> Profile:
     """Flags del CLI -> profile (tree/vents no están bloqueados)."""
     t = prof.tree.model_copy()
@@ -129,8 +153,9 @@ def run_propose(
     tree_mode: str | None = None,
     feeders: int | None = None,
     vents_opt: str | None = None,
+    stem_opt: str | None = None,
 ) -> Proposal:
-    base_profile = load_profile(profile_path)
+    base_profile = policy.resolve_stem(apply_stem_cli(load_profile(profile_path), stem_opt))
     job = load_job(job_path)
     if stl is None:
         if not job.stl:
@@ -141,6 +166,7 @@ def run_propose(
 
     locks = policy.effective_locks(base_profile, job)
     prof, ov_warn = policy.apply_overrides(base_profile, job)
+    prof = policy.resolve_stem(prof)
     prof = apply_cli(prof, tree_mode, feeders, vents_opt)
     locked_vals = policy.lock_values(base_profile, locks)
 
@@ -339,15 +365,18 @@ def run_validate(out_path: str | Path, proposal_path=None, profile_path=None) ->
     return validate_mod.validate(out, prop, profile=prof)
 
 
-def run_batch(folder, profile_path, outdir, do_apply: bool, tree_mode=None, feeders=None, vents_opt=None) -> list[dict]:
+def run_batch(
+    folder, profile_path, outdir, do_apply: bool, tree_mode=None, feeders=None, vents_opt=None, stem_opt=None
+) -> list[dict]:
     folder, outdir = Path(folder), Path(outdir)
+    apply_stem_cli(load_profile(profile_path), stem_opt)  # un --stem inválido falla antes, no una vez por anillo
     rows = []
     for stl in sorted(folder.glob("*.stl")):
         wd = outdir / stl.stem
         row = {"ring": stl.name, "ok": False, "feeders": "", "tree": "", "vents": "", "coverage": "",
                "piece_height_mm": "", "warnings": 0, "error": ""}
         try:
-            prop = run_propose(stl, profile_path, None, wd, tree_mode, feeders, vents_opt)
+            prop = run_propose(stl, profile_path, None, wd, tree_mode, feeders, vents_opt, stem_opt)
             row.update(feeders=len(prop.feeders), tree=prop.tree["used"], vents=len(prop.vents),
                        coverage=round(prop.analysis["coverage"], 3) if prop.analysis else "",
                        piece_height_mm=round(prop.ring_job["piece_height_mm"], 1), warnings=len(prop.warnings))

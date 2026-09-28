@@ -30,7 +30,8 @@ from spruegen.schemas import FeatureError, InputError, PolicyError, SpruegenErro
 app = typer.Typer(
     add_completion=False,
     no_args_is_help=True,
-    help="Árbol de colada para anillos (lost-wax): feeders por la cara interna + stem Ø10x35, listo para resina.",
+    help="Árbol de colada para anillos (lost-wax): feeders por la cara interna + stem Ø10x35 (o stub), "
+    "listo para resina.",
 )
 profile_app = typer.Typer(no_args_is_help=True, help="Presets de metal / proceso.")
 materials_app = typer.Typer(no_args_is_help=True, help="Base de aleaciones con citas (fuente única de datos metalúrgicos).")
@@ -54,6 +55,7 @@ def _fail(msg: str, code: int) -> None:
 
 TREE_HELP = "single | spider | y | auto (auto = el análisis decide cantidad y lugar)"
 VENTS_HELP = "off | auto (donde el metal llega último) | N (cantidad)"
+STEM_HELP = "off (sin downstem: stub corto para pegar a mano) | DxH en mm, p. ej. 12x40"
 
 
 @app.command()
@@ -104,12 +106,13 @@ def propose(
     tree_mode: Optional[str] = typer.Option(None, "--tree", help=TREE_HELP),
     feeders: Optional[int] = typer.Option(None, "--feeders", help="cantidad de feeders (spider / y / auto)"),
     vents_opt: Optional[str] = typer.Option(None, "--vents", help=VENTS_HELP),
+    stem_opt: Optional[str] = typer.Option(None, "--stem", help=STEM_HELP),
 ):
     """Escribe proposal.json + previews (anillo / árbol / varillas). Nunca escribe out.stl."""
     if tree_mode and tree_mode not in ("single", "spider", "y", "auto"):
         _fail(f"--tree inválido: {tree_mode} ({TREE_HELP})", 2)
     try:
-        prop = run_propose(stl, profile, job, out_dir, tree_mode, feeders, vents_opt)
+        prop = run_propose(stl, profile, job, out_dir, tree_mode, feeders, vents_opt, stem_opt)
     except (FeatureError, PolicyError, InputError, SpruegenError, ValueError) as e:
         _fail(str(e), 2)
     typer.echo(f"proposal: {Path(out_dir) / 'proposal.json'}")
@@ -123,7 +126,7 @@ def propose(
         )
     for b in prop.branches:
         typer.echo(f"tronco:   Ø{b.d_mm:.2f} mm → brazos {[i + 1 for i in b.arms]}")
-    typer.echo(f"stem:     Ø{prop.stem.d_mm} x {prop.stem.h_mm} mm")
+    typer.echo(f"{prop.stem.kind + ':':<9} Ø{prop.stem.d_mm} x {prop.stem.h_mm} mm")
     typer.echo("previews: " + "\n          ".join(prop.previews.values()))
     for w in prop.warnings:
         typer.echo(f"WARNING: {w}")
@@ -188,9 +191,13 @@ def batch(
     do_apply: bool = typer.Option(False, "--apply", help="también correr apply (sin revisión humana)"),
     tree_mode: Optional[str] = typer.Option(None, "--tree", help=TREE_HELP),
     vents_opt: Optional[str] = typer.Option(None, "--vents", help=VENTS_HELP),
+    stem_opt: Optional[str] = typer.Option(None, "--stem", help=STEM_HELP),
 ):
     """Un job por STL de la carpeta (siguen siendo un anillo por árbol). Escribe summary.csv."""
-    rows = run_batch(folder, profile, out_dir, do_apply, tree_mode, None, vents_opt)
+    try:
+        rows = run_batch(folder, profile, out_dir, do_apply, tree_mode, None, vents_opt, stem_opt)
+    except InputError as e:
+        _fail(str(e), 2)
     for r in rows:
         typer.echo(f"{'OK ' if r['ok'] else 'ERR'} {r['ring']}: {r['feeders']} feeders {r['tree']} {r['error']}")
     typer.echo(f"-> {out_dir}/summary.csv")

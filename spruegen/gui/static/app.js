@@ -187,8 +187,15 @@ function seg(id) {
   });
   return () => el.querySelector("button.on").dataset.v;
 }
+function setSeg(id, v) {
+  $(id).querySelectorAll("button").forEach((x) => {
+    x.classList.toggle("on", x.dataset.v === v);
+    x.setAttribute("aria-checked", x.dataset.v === v);
+  });
+}
 const treeValue = seg("#tree");
 const ventsValue = seg("#vents");
+const stemValue = seg("#stem");
 
 function currentPreset() {
   return state.presets.find((p) => p.name === $("#preset").value);
@@ -196,7 +203,13 @@ function currentPreset() {
 function fillAdvanced(p) {
   $$("[data-adv]").forEach((inp) => (inp.value = p.advanced[inp.dataset.adv]));
   $("#preset-notes").textContent = p.notes;
-  $("#stem-dims").textContent = `Ø${p.stem.d_mm} × ${p.stem.h_mm} mm`;
+  setSeg("#stem", p.stem_kind);
+  fillStemDims(p);
+}
+function fillStemDims(p) {
+  const dims = stemValue() === "stub" ? p.stub : p.stem;
+  $("#stem-d").value = dims.d_mm;
+  $("#stem-h").value = dims.h_mm;
 }
 function config() {
   const p = currentPreset();
@@ -211,6 +224,7 @@ function config() {
     tree_mode: tree,
     feeders: tree === "spider" || tree === "y" ? parseInt($("#feeders").value, 10) : null,
     vents: ventsValue(),
+    stem: { kind: stemValue(), d_mm: parseFloat($("#stem-d").value), h_mm: parseFloat($("#stem-h").value) },
     advanced,
   };
 }
@@ -222,6 +236,8 @@ function onSettingsChange() {
 }
 $("#preset").addEventListener("change", () => { fillAdvanced(currentPreset()); onSettingsChange(); });
 $("#feeders").addEventListener("input", onSettingsChange);
+$("#stem").addEventListener("click", (e) => { if (e.target.closest("button")) fillStemDims(currentPreset()); });
+$$("#stem-d, #stem-h").forEach((i) => i.addEventListener("input", onSettingsChange));
 $$("[data-adv]").forEach((i) => i.addEventListener("input", onSettingsChange));
 $("#adv-reset").addEventListener("click", () => { fillAdvanced(currentPreset()); onSettingsChange(); });
 
@@ -392,7 +408,7 @@ function renderResult(r, secs) {
   body.className = "";
   body.innerHTML = `
     <div><span class="status ${r.ok ? "ok" : "bad"}">${r.ok ? "✓ Ready to export" : "✗ Did not pass"}</span>
-      <b>${escapeHtml(r.tree.label)}</b> · stem Ø${r.stem.d_mm} × ${r.stem.h_mm} mm ·
+      <b>${escapeHtml(r.tree.label)}</b> · ${r.stem.kind === "stub" ? "stub" : "stem"} Ø${r.stem.d_mm} × ${r.stem.h_mm} mm ·
       ${r.vents.length} vent${r.vents.length === 1 ? "" : "s"} · <span class="muted">${fmt(secs, 1)} s</span></div>
     <table class="feeders"><thead><tr><th>#</th><th>Feeder</th><th>Diameter</th><th>Length</th><th>Angle</th></tr></thead>
       <tbody>${rows}${trunks}</tbody></table>

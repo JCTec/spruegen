@@ -4,14 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "spruegen"
-version = "0.3.0"
+version = "0.4.0"
 description = "Deterministic sprue-tree generator for lost-wax ring casting, backed by a cited alloy database"
 license = {file = "LICENSE"}
 authors = [{name = "Juan Carlos Estévez Rodríguez"}]
 keywords = ["jewelry", "casting", "lost-wax", "sprue", "stl", "metallurgy"]
 classifiers = [
   "Programming Language :: Python :: 3",
-  "License :: Other/Proprietary License",
+  "License :: OSI Approved :: MIT License",
   "Topic :: Scientific/Engineering",
   "Topic :: Multimedia :: Graphics :: 3D Modeling",
 ]

@@ -55,15 +55,17 @@ button, input, select { font: inherit; color: inherit; }
 .field select, .field input { display: block; width: 100%; margin-top: 4px; padding: 6px 8px; border: 1px solid var(--line); border-radius: 7px; background: var(--bg); color: var(--fg); }
 .field.row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .field.row input { width: 90px; margin: 0; text-align: right; }
+.field:has(> input:disabled) { opacity: .45; }
+.field input:disabled { color: var(--mut); cursor: not-allowed; }
 .hint { color: var(--mut); font-size: 12px; margin: 2px 0 6px; }
 .hint.inline { margin-left: 4px; }
 .seg { display: flex; margin-top: 4px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
 .seg button { flex: 1; padding: 6px 4px; border: 0; background: var(--bg); cursor: pointer; border-right: 1px solid var(--line); color: var(--fg); }
 .seg button:last-child { border-right: 0; }
 .seg button.on { background: var(--accent); color: var(--accent-fg); }
-.locked { font-size: 12.5px; color: var(--mut); margin: 10px 0 6px; }
-.locked b { color: var(--fg); font-weight: 600; }
-.tag { font-size: 11px; border: 1px solid var(--line); border-radius: 10px; padding: 0 7px; margin-left: 4px; }
+.stem-dims { display: flex; gap: 12px; }
+.stem-dims .field { flex: 1; margin-top: 0; }
+.stem-dims .field.row input { width: 64px; }
 details summary { cursor: pointer; color: var(--mut); font-size: 12.5px; margin: 6px 0; }
 .link { background: none; border: 0; color: var(--accent); cursor: pointer; padding: 4px 0; font-size: 12.5px; }
 

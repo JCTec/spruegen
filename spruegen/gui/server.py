@@ -23,8 +23,17 @@ ROOT = Path.home() / ".spruegen" / "gui"
 SERVE_SUFFIXES = {".stl", ".png", ".json", ".html"}
 MAX_UPLOAD = 200 * 1024 * 1024
 
+class _RevalidatedStatic(StaticFiles):
+    """Static files that the browser rechecks on every load (ETag makes it cheap), so edits show up."""
+
+    def file_response(self, *args, **kwargs):
+        resp = super().file_response(*args, **kwargs)
+        resp.headers["Cache-Control"] = "no-cache"
+        return resp
+
+
 app = FastAPI(title="spruegen", docs_url=None, redoc_url=None)
-app.mount("/static", StaticFiles(directory=STATIC), name="static")
+app.mount("/static", _RevalidatedStatic(directory=STATIC), name="static")
 SESSIONS: dict[str, Session] = {}
 _LOCK = threading.Lock()
 

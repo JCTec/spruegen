@@ -7,7 +7,7 @@ This document records where the code stood at v0.2.0, what v0.3.0 changes, and t
 It takes the STL of **one ring** and produces a printable sprue tree for lost-wax casting:
 
 - feeders attach **only to the inner face** of the shank, so lattice, filigree and engraving on the outside stay untouched (verified to 0.05 mm);
-- a locked Ø10 × 35 mm downstem that fits the shop's rubber sprue base;
+- a Ø10 × 35 mm downstem (editable) that fits the shop's rubber sprue base, or a short stub instead (`stem_kind: "stub"`); the stub is planned as a small stem, so routing and validation are shared;
 - the number and placement of feeders come from a geometric feeding analysis (thermal modulus plus directional-solidification paths), not from a CFD simulation;
 - the result is one watertight, validated mesh.
 
@@ -41,7 +41,7 @@ spruegen/
 
 ### Strengths worth keeping
 
-- **Deterministic and conservative.** Nothing attaches to the outer face, locks protect the stem, `apply` validates the reloaded float32 STL, and it writes atomically.
+- **Deterministic and conservative.** Nothing attaches to the outer face, locks keep the chosen stem from changing behind your back (a `job.json` override can't touch it), `apply` validates the reloaded float32 STL, and it writes atomically.
 - **The algorithms are sound.** The EDT thermal modulus is a proxy for Chvorinov's rule, the maximin path over a maximum spanning tree models directional solidification, and greedy set cover followed by reverse delete picks the feeders.
 - **Good tests for a geometry tool.** There are 55 tests, including parametric rings (signet, solitaire, lattice, dumbbell) and an end-to-end GUI flow.
 - **The file contract is clear.** `profile.json`, `job.json`, `proposal.json`, `preview_*.stl` and `out.stl` each have a single writer.
@@ -152,6 +152,6 @@ The module moves are mechanical: file contents are unchanged apart from import l
 
 ### Phase D: open source
 
-- LICENSE (PolyForm Noncommercial 1.0.0 for code, CC BY-NC-SA 4.0 for the data), CONTRIBUTING, CI, and a data-contribution PR template. Most of this is in v0.3.0.
+- LICENSE (MIT for code, CC BY 4.0 for the data), CONTRIBUTING, CI, and a data-contribution PR template. Done in v0.3.0; relicensed to MIT / CC BY in v0.4.0.
 - Publish to GitHub. Keep generated showcase output out of git and publish the gallery via GitHub Pages instead.
 - Release wheels (pure Python). Document that `manifold3d` and `shapely` are binary dependencies.

@@ -5,7 +5,7 @@
 Give spruegen the STL of one ring. It gives back a printable, watertight sprue tree:
 
 - **Feeders attach only to the inner face** of the shank. Lattice, filigree and engraving on the outside stay untouched, and this is checked to 0.05 mm.
-- **A locked downstem** (Ø10 × 35 mm by default) that fits your rubber sprue base.
+- **A downstem sized to your rubber sprue base** (Ø10 × 35 mm by default, editable), or **no downstem**: the feeders end in a short stub you wax onto your own tree (`--stem off`, or *Stub only* in the app). Whatever size you choose is what validation checks.
 - **The number and placement of feeders come from a feeding analysis.** It uses a thermal-modulus field (the Chvorinov proxy), directional-solidification paths, capacity limits and symmetry, not guesswork. You can also choose the layout yourself: single, spider or Y.
 - **Optional vent rods** go where the metal arrives last.
 - **A casting sheet for your alloy.** It gives grams of metal, pour and flask temperature windows for the ring's wall thickness, the investment type, and rule checks. Every number cites the paper or datasheet it came from.
@@ -14,9 +14,17 @@ There's no CFD and no LLM at runtime. The same input always gives the same tree.
 
 ![spruegen GUI](docs/gui.png)
 
-> **Status:** v0.3 — working CLI + local web GUI, used in a real Ag925 vacuum-casting shop. The feeding parameters are starting values that you should calibrate against your own casts (`spruegen log`).
+> **Status:** v0.4 — working CLI + local web GUI, used in a real Ag925 vacuum-casting shop. The feeding parameters are starting values that you should calibrate against your own casts (`spruegen log`).
 
 ## Install
+
+macOS / Linux with [Homebrew](https://brew.sh):
+
+```bash
+brew install jctec/spruegen/spruegen
+```
+
+From source:
 
 ```bash
 git clone https://github.com/JCTec/spruegen && cd spruegen
@@ -81,9 +89,7 @@ Code, alloy data with citations, and reports from real casts are all welcome. Se
 
 ## License
 
-- **Code:** [PolyForm Noncommercial 1.0.0](LICENSE). You may use, study, modify and share it for noncommercial purposes: hobby, personal, research and education. **Commercial use is not permitted** without a separate license from the author.
-- **Alloy dataset:** [CC BY-NC-SA 4.0](spruegen/materials/data/LICENSE.md).
-
-This is a *source-available* license, not an OSI "open source" license, because it restricts commercial use.
+- **Code:** [MIT](LICENSE).
+- **Alloy dataset:** [CC BY 4.0](spruegen/materials/data/LICENSE.md). If you reuse it, credit the spruegen alloy database and keep the per-value source citations.
 
 Casting involves molten metal at up to 2000 °C. spruegen gives geometric and literature-based guidance, not a guarantee. Always follow your equipment's and your alloy supplier's instructions.
